@@ -56,7 +56,7 @@ body {
     transition: all 5s;
     background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
     background-position: 0% 0%;
-    background-size: 1vmin 1vmin;
+    background-size: 1.5vmin 1.5vmin;
     height: 100vh;
     width: 100vw;
     position: absolute;
