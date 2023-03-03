@@ -1,0 +1,129 @@
+:root {
+    --purple: rgb(128, 80, 233);
+    --pink: rgb(228, 58, 217);
+    --blue: rgb(1, 150, 236);
+}
+
+@keyframes text-background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes background-pan {
+    from {
+      transform: scale(5);
+    }
+    50% {
+      transform: scale(3.5) rotate(180deg);
+    }
+    to {
+      transform: scale(2);
+    }
+  }
+
+body {
+    background-color: rgb(10, 10, 10);
+    display: grid;
+    height: 95vh;
+    place-items: center;
+    overflow: hidden;
+}
+
+.gradient-effect {
+    animation: text-background-pan 1s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--pink),
+        var(--blue),
+        var(--purple)
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: none;
+}
+
+.background {
+    animation: background-pan 90s linear infinite alternate, background-rotate 90s linear infinite alternate;
+    animation-timing-function: ease-in-out;
+    transition: all 5s;
+    background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
+    background-position: 0% 0%;
+    background-size: 1vmin 1vmin;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+
+h1 {
+    color: white;
+    font-family: "Tilt Warp";
+    font-size: clamp(5em, 2vw, 4em);
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+p {
+    color: white;
+    font-family: "Tilt Warp";
+    font-size: clamp(1em, 2vw, 4em);
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.gradient-effect {
+    transition: 0.2s;
+}
+
+.gradient-effect:hover {
+    font-size: 1.2em;
+}
+
+.icons {
+    font-size: 1.5em;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.fa-stack {
+    margin: 12px;
+    transition: all 0.2s;
+}
+
+.fa-stack:hover {
+    transform: scale(1.25);
+}
+
