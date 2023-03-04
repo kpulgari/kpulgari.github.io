@@ -125,5 +125,6 @@ a {
 
 .fa-stack:hover {
     transform: scale(1.25);
+    opacity: 0.6;
 }
 
