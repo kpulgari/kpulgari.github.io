@@ -1,7 +1,7 @@
 :root {
-    --purple: rgb(128, 80, 233);
+    --purple: rgb(100, 39, 233);
     --pink: rgb(228, 58, 217);
-    --blue: rgb(1, 150, 236);
+    --blue: rgb(1, 146, 236);
 }
 
 @keyframes text-background-pan {
@@ -26,12 +26,27 @@
     }
   }
 
+@keyframes background-gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 25%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
 body {
     background-color: rgb(10, 10, 10);
     display: grid;
-    height: 95vh;
     place-items: center;
     overflow: hidden;
+	background: linear-gradient(-45deg, black, #0a0421, black, #0b0423);
+	background-size: 400% 400%;
+	animation: background-gradient 10s ease-in-out alternate infinite;
+    height: 100vh;
 }
 
 .gradient-effect {
@@ -48,6 +63,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border: none;
+    transition: 0.2s;
+}
+
+.gradient-effect:hover {
+    font-size: 1.2em;
 }
 
 .background {
@@ -67,8 +87,8 @@ h1 {
     font-family: "Tilt Warp";
     font-size: clamp(5em, 2vw, 4em);
     font-weight: 400;
-    margin: 0px;
-    padding: 20px;
+    margin: 0rem;
+    padding: 0rem;
     position: relative;
     text-align: center;
     white-space: nowrap;
@@ -79,11 +99,16 @@ p {
     font-family: "Tilt Warp";
     font-size: clamp(1em, 2vw, 4em);
     font-weight: 400;
-    margin: 0px;
-    padding: 20px;
+    margin: 0rem;
+    padding: 2rem;
     position: relative;
     text-align: center;
     white-space: nowrap;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 .hidden {
@@ -97,29 +122,16 @@ p {
     filter: blur(0);
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
-.gradient-effect {
-    transition: 0.2s;
-}
-
-.gradient-effect:hover {
-    font-size: 1.2em;
-}
-
 .icons {
     font-size: 1.5em;
     vertical-align: middle;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 1rem;
 }
 
 .fa-stack {
-    margin: 12px;
+    margin: 0.8rem;
     transition: all 0.2s;
 }
 
