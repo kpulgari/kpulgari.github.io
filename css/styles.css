@@ -39,11 +39,10 @@
 }
 
 body {
-    background-color: rgb(10, 10, 10);
     display: grid;
     place-items: center;
     overflow: hidden;
-	background: linear-gradient(-45deg, black, #0a0421, black, #0b0423);
+	background: linear-gradient(-45deg, black, #0a0421, black, #150b35);
 	background-size: 400% 400%;
 	animation: background-gradient 10s ease-in-out alternate infinite;
     height: 100vh;
