@@ -235,7 +235,7 @@ const Page = () => {
             {work.map((w, index) => (
               <div key={index} className="py-2 w-full rounded-md text-sm">
                 <div className="flex flex-col space-y-2">
-                  <div className="justify-between w-full flex">
+                  <div className="justify-between w-full flex items-center">
                     <div>
                       <div className="flex flex-row space-x-2 items-center">
                         {w["image"]}
@@ -283,7 +283,7 @@ const Page = () => {
               key={index}
               className="flex flex-col bg-white rounded-lg overflow-hidden"
             >
-              <div className="lg:h-48 md:h-80 h-54 flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
+              <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
                 <img
                   src={project["screenshot"]}
                   alt="project screenshot"
