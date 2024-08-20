@@ -35,7 +35,7 @@ const buttons = [
 const work = [
   {
     name: "Cohesity",
-    role: "Software Engineering Intern",
+    role: "SWE Intern",
     dates: "May 2024 - Present",
     location: "San Jose, CA",
     description:
@@ -45,7 +45,7 @@ const work = [
   },
   {
     name: "Charles Schwab",
-    role: "Software Engineering Intern",
+    role: "SWE Intern",
     dates: "Jun. 2023 - Aug. 2023",
     location: "St. Louis, MO",
     description:
@@ -143,8 +143,8 @@ const projects = [
 const Page = () => {
   return (
     <main className="flex flex-col items-center mb-12">
-      <section className="lg:w-3/4 w-[95%] mt-4">
-        <div className="w-full lg:p-8 md:p-8 p-4 flex flex-row justify-center items-center lg:space-x-16 md:space-x-12 space-x-8">
+      <section className="lg:w-1/2 md:w-3/4 w-[95%] mt-4">
+        <div className="w-full lg:py-8 md:py-8 p-4 flex flex-row md:justify-center lg:justify-center justify-left items-center lg:space-x-16 md:space-x-12 space-x-8">
           <img
             src={kpulgari}
             className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28"
@@ -248,7 +248,9 @@ const Page = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-sm font-bold">{w["dates"]}</div>
+                      <div className="text-xs lg:text-sm md:text-sm font-bold">
+                        {w["dates"]}
+                      </div>
                       <div className="text-xs text-gray-500 italic">
                         {w["location"]}
                       </div>
@@ -281,7 +283,7 @@ const Page = () => {
               key={index}
               className="flex flex-col bg-white rounded-lg overflow-hidden"
             >
-              <div className="lg:h-48 md:h-80 h-64 flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
+              <div className="lg:h-48 md:h-80 h-54 flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
                 <img
                   src={project["screenshot"]}
                   alt="project screenshot"
