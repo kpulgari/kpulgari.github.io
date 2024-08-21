@@ -151,7 +151,7 @@ const Page = () => {
           ></img>
           <div className="text-left space-y-2">
             <div className="space-y-1">
-              <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold">
+              <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold">
                 Kaushik Pulgari
               </h1>
               <p className="lg:text-sm md:text-sm text-xs">
