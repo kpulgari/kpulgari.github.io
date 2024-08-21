@@ -299,16 +299,16 @@ const Page = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white rounded-lg overflow-hidden"
+              className="flex flex-col border rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
             >
-              <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
+              <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center rounded-lg">
                 <img
                   src={project["screenshot"]}
                   alt="project screenshot"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover rounded-lg rounded-b-none"
                 />
               </div>
-              <div className="flex-1 mt-2">
+              <div className="flex-1 mt-2 p-2">
                 <h3 className="font-bold text-lg mb-2">{project["name"]}</h3>
                 <p className="text-sm mb-4">{project["description"]}</p>
                 <div className="flex flex-wrap gap-2">
