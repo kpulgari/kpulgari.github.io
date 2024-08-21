@@ -28,7 +28,7 @@ const buttons = [
   {
     name: "Resume",
     icon: <span className="text-xs font-semibold">Resume</span>,
-    link: "https://drive.google.com/file/d/1R_bz7D0mY6owGwnKIOlEqJ0Qwzz4v9Gc/view",
+    link: "https://drive.google.com/file/d/1qowRHv0rpnjCErj4XZbTMuQF7O17PBiQ/view?usp=sharing",
   },
 ];
 
