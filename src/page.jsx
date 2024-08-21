@@ -308,9 +308,11 @@ const Page = () => {
                   className="w-full h-full object-cover rounded-lg rounded-b-none"
                 />
               </div>
-              <div className="flex-1 mt-2 p-2">
-                <h3 className="font-bold text-lg mb-2">{project["name"]}</h3>
-                <p className="text-sm mb-4">{project["description"]}</p>
+              <div className="flex flex-col h-full p-2 justify-between">
+                <div className="space-y-2 mb-4">
+                  <h3 className="font-bold text-lg">{project["name"]}</h3>
+                  <p className="text-sm">{project["description"]}</p>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {project["tags"].map((tag, tagIndex) => (
                     <span
