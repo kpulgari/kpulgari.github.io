@@ -142,16 +142,16 @@ const projects = [
 
 const Page = () => {
   return (
-    <main className="flex flex-col items-center mb-12">
-      <section className="lg:w-1/2 md:w-3/4 w-[95%] mt-4">
-        <div className="w-full lg:py-8 md:py-8 p-4 flex flex-row md:justify-center lg:justify-center justify-left items-center lg:space-x-16 md:space-x-12 space-x-8">
+    <main className="flex flex-col items-center mb-8">
+      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
+        <div className="w-full flex flex-row justify-left items-center lg:space-x-16 md:space-x-12 space-x-8">
           <img
             src={kpulgari}
             className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28"
           ></img>
           <div className="text-left space-y-2">
-            <div>
-              <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold">
+            <div className="space-y-1">
+              <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold">
                 Kaushik Pulgari
               </h1>
               <p className="lg:text-sm md:text-sm text-xs">
@@ -176,7 +176,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-4">
+      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
         <div className="flex flex-col gap-2">
           <h2 className="font-bold lg:text-2xl md:text-2xl text-xl border border-b-1 border-l-0 border-t-0 border-r-0">
             About
@@ -185,7 +185,7 @@ const Page = () => {
             <div>
               <span>
                 {
-                  "Hey! 👋 I'm Kaushik, a rising senior studying Computer Science + Economics at the University of Illinois Urbana-Champaign with experience in developing and testing software. "
+                  "Hey! 👋 I'm Kaushik, a senior studying Computer Science + Economics at the University of Illinois Urbana-Champaign with experience in developing and testing software. "
                 }
               </span>
               <br /> <br />
@@ -197,7 +197,7 @@ const Page = () => {
               <br /> <br />
               <span>
                 {
-                  "When I'm not busy with work or school, I like to spend my time building software projects - like "
+                  "When I'm not busy with work or school, I like to spend my time building stuff like "
                 }
                 <a
                   href="https://projectmodulo.com/"
@@ -207,8 +207,16 @@ const Page = () => {
                   Modulo
                 </a>
                 {
-                  " - a project management and collaboration tool I developed to help creators connect with others across the world."
+                  " - a project management & collaboration tool I developed with my friend "
                 }
+                <a
+                  href="https://nicktrapp.com/"
+                  target="_blank"
+                  className="underline underline-offset-2 font-semibold"
+                >
+                  Nick
+                </a>
+                {" - which help creators connect with others across the world."}
               </span>
               <br /> <br />
               <span>
@@ -283,7 +291,7 @@ const Page = () => {
               key={index}
               className="flex flex-col bg-white rounded-lg overflow-hidden"
             >
-              <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
+              <div className="lg:h-48 md:h-80 h-56we flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
                 <img
                   src={project["screenshot"]}
                   alt="project screenshot"
