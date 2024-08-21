@@ -35,7 +35,8 @@ const buttons = [
 const work = [
   {
     name: "Cohesity",
-    role: "SWE Intern",
+    link: "https://www.cohesity.com",
+    role: "Software Engineering Intern",
     dates: "May 2024 - Present",
     location: "San Jose, CA",
     description:
@@ -45,7 +46,8 @@ const work = [
   },
   {
     name: "Charles Schwab",
-    role: "SWE Intern",
+    link: "https://www.schwab.com",
+    role: "Software Engineering Intern",
     dates: "Jun. 2023 - Aug. 2023",
     location: "St. Louis, MO",
     description:
@@ -55,6 +57,7 @@ const work = [
   },
   {
     name: "Mortgage Connect",
+    link: "https://www2.mortgageconnectlp.com",
     role: "Software QA Intern",
     dates: "Jun. 2022 - Aug. 2022",
     location: "Remote",
@@ -216,7 +219,9 @@ const Page = () => {
                 >
                   Nick
                 </a>
-                {" - which help creators connect with others across the world."}
+                {
+                  " - which helps creators connect with others across the world."
+                }
               </span>
               <br /> <br />
               <span>
@@ -248,7 +253,12 @@ const Page = () => {
                       <div className="flex flex-row space-x-2 items-center">
                         {w["image"]}
                         <div>
-                          <div className="font-bold">{w["name"]}</div>
+                          <div className="font-bold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2">
+                            <div>{w["name"]}</div>
+                            <a href={w["link"]} target="_blank">
+                              <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
+                            </a>
+                          </div>
                           <div className="text-xs text-gray-500 italic">
                             {w["role"]}
                           </div>
@@ -291,7 +301,7 @@ const Page = () => {
               key={index}
               className="flex flex-col bg-white rounded-lg overflow-hidden"
             >
-              <div className="lg:h-48 md:h-80 h-56we flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
+              <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center p-2 bg-gray-200/75 rounded-lg">
                 <img
                   src={project["screenshot"]}
                   alt="project screenshot"
