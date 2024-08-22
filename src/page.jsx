@@ -8,6 +8,7 @@ import smartshopper from "./assets/smart-shopper.png";
 import wikipedia from "./assets/wikipedia-thumbnail.png";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 const buttons = [
   {
@@ -145,7 +146,7 @@ const projects = [
 
 const Page = () => {
   return (
-    <main className="flex flex-col items-center mb-8">
+    <main className="flex flex-col items-center">
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
         <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center lg:space-x-16 md:space-x-12 space-x-8">
           <img
@@ -161,14 +162,15 @@ const Page = () => {
                 {"SWE Intern @ Cohesity | CS + Economics @ UIUC '25"}
               </p>
             </div>
-            <div className="flex flex-row items-center justify-left space-x-2">
+            <div className="flex flex-row items-center justify-left space-x-1">
+              <ThemeToggle></ThemeToggle>
               {buttons.map((button, index) => (
                 <a
                   key={index}
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border p-2 rounded-md text-sm hover:bg-gray-200/40 transition-colors duration-200 cursor-pointer"
+                  className="p-2 rounded-md text-sm bg-gray-200/50 hover:bg-gray-200/75 dark:bg-gray-200/15 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
                 >
                   <div className="w-fit h-4 text-center items-center justify-center flex">
                     {button.icon}
@@ -181,9 +183,7 @@ const Page = () => {
       </section>
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
         <div className="flex flex-col gap-2">
-          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl border border-b-1 border-l-0 border-t-0 border-r-0">
-            About
-          </h2>
+          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl">About</h2>
           <div className="flex flex-row items-center justify-left text-sm">
             <div>
               <span>
@@ -241,7 +241,7 @@ const Page = () => {
       </section>
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
         <div className="flex flex-col gap-2">
-          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl border border-b-1 border-l-0 border-t-0 border-r-0">
+          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl">
             Experience
           </h2>
           <div className="flex flex-row items-center justify-center flex-wrap space-y-2">
@@ -259,7 +259,7 @@ const Page = () => {
                               <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
                             </a>
                           </div>
-                          <div className="text-xs text-gray-500 italic">
+                          <div className="text-xs text-gray-500 dark:text-gray-400 italic">
                             {w["role"]}
                           </div>
                         </div>
@@ -269,17 +269,17 @@ const Page = () => {
                       <div className="text-xs lg:text-sm md:text-sm font-bold">
                         {w["dates"]}
                       </div>
-                      <div className="text-xs text-gray-500 italic">
+                      <div className="text-xs text-gray-500 dark:text-gray-400 italic">
                         {w["location"]}
                       </div>
                     </div>
                   </div>
                   <div className="text-sm">{w["description"]}</div>
-                  <div className="flex-wrap flex flex-row gap-2 text-xs">
+                  <div className="flex-wrap flex flex-row gap-1 text-xs">
                     {w["tags"].map((tag, index) => (
                       <div
                         key={index}
-                        className="bg-gray-200/75 px-2 py-1 rounded-md"
+                        className="bg-gray-200/75 dark:bg-gray-200/15 font-semibold px-2 py-1 rounded-md"
                       >
                         {tag}
                       </div>
@@ -292,20 +292,20 @@ const Page = () => {
         </div>
       </section>
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
-        <h2 className="font-bold lg:text-2xl md:text-2xl text-xl border border-b-1 border-l-0 border-t-0 border-r-0 mb-4">
+        <h2 className="font-bold lg:text-2xl md:text-2xl text-xl mb-4">
           Projects
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col border rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
+              className="flex flex-col border dark:border-gray-100/15 rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
             >
               <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center rounded-lg">
                 <img
                   src={project["screenshot"]}
                   alt="project screenshot"
-                  className="w-full h-full object-cover rounded-lg rounded-b-none"
+                  className="w-full h-full object-cover object-top rounded-lg rounded-b-none"
                 />
               </div>
               <div className="flex flex-col h-full p-2 justify-between">
@@ -313,11 +313,11 @@ const Page = () => {
                   <h3 className="font-bold text-lg">{project["name"]}</h3>
                   <p className="text-sm">{project["description"]}</p>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1">
                   {project["tags"].map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="bg-gray-200 px-2 py-1 rounded-md text-xs"
+                      className="bg-gray-200/75 dark:bg-gray-200/15 px-2 py-1 font-semibold rounded-md text-xs"
                     >
                       {tag}
                     </span>
@@ -328,6 +328,7 @@ const Page = () => {
           ))}
         </div>
       </section>
+      <section className="h-12"></section>
     </main>
   );
 };
