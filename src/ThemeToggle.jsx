@@ -7,7 +7,31 @@ const ThemeToggle = () => {
   const [currentTheme, setCurrentTheme] = useState(theme);
 
   useEffect(() => {
-    setCurrentTheme(theme);
+    const getSystemTheme = () => {
+      if (window.matchMedia) {
+        const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        return darkModeQuery.matches ? "dark" : "light";
+      }
+      return "light";
+    };
+
+    if (theme === "system") {
+      setCurrentTheme(getSystemTheme());
+    } else {
+      setCurrentTheme(theme);
+    }
+
+    const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = () => {
+      if (theme === "system") {
+        setCurrentTheme(getSystemTheme());
+      }
+    };
+    darkModeQuery.addEventListener("change", handleChange);
+
+    return () => {
+      darkModeQuery.removeEventListener("change", handleChange);
+    };
   }, [theme]);
 
   return (

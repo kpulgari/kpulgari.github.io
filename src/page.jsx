@@ -146,7 +146,7 @@ const projects = [
 
 const Page = () => {
   return (
-    <main className="flex flex-col items-center">
+    <main className="flex flex-col items-center bg-white dark:bg-black">
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
         <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center lg:space-x-16 md:space-x-12 space-x-8">
           <img
