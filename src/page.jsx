@@ -170,7 +170,7 @@ const Page = () => {
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md text-sm bg-gray-200/50 hover:bg-gray-200/75 dark:bg-gray-200/15 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
+                  className="p-2 rounded-md text-sm bg-gray-200/50 hover:bg-gray-200/75 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
                 >
                   <div className="w-fit h-4 text-center items-center justify-center flex">
                     {button.icon}
@@ -279,7 +279,7 @@ const Page = () => {
                     {w["tags"].map((tag, index) => (
                       <div
                         key={index}
-                        className="bg-gray-200/75 dark:bg-gray-200/15 font-semibold px-2 py-1 rounded-md"
+                        className="bg-gray-200/75 dark:bg-gray-200/20 font-semibold px-2 py-1 rounded-md"
                       >
                         {tag}
                       </div>
@@ -299,7 +299,7 @@ const Page = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col border dark:border-gray-100/15 rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
+              className="flex flex-col border dark:border-gray-100/20 rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
             >
               <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center rounded-lg">
                 <img
@@ -317,7 +317,7 @@ const Page = () => {
                   {project["tags"].map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="bg-gray-200/75 dark:bg-gray-200/15 px-2 py-1 font-semibold rounded-md text-xs"
+                      className="bg-gray-200/75 dark:bg-gray-200/20 px-2 py-1 font-semibold rounded-md text-xs"
                     >
                       {tag}
                     </span>
