@@ -146,7 +146,7 @@ const projects = [
 
 const Page = () => {
   return (
-    <main className="flex flex-col items-center bg-white dark:bg-black">
+    <main className="flex flex-col items-center">
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
         <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center lg:space-x-16 md:space-x-12 space-x-8">
           <img
@@ -170,7 +170,7 @@ const Page = () => {
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md text-sm bg-gray-200/50 hover:bg-gray-200/75 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
+                  className="p-2 rounded-md text-sm bg-gray-200/50 hover:bg-gray-300 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
                 >
                   <div className="w-fit h-4 text-center items-center justify-center flex">
                     {button.icon}
