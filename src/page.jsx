@@ -194,7 +194,7 @@ const Page = () => {
               <br /> <br />
               <span>
                 {
-                  "I just interned on the Performance Team at Cohesity, where I built an internal tool to expedite the debugging process for developers. "
+                  "I recently interned on the Performance Team at Cohesity, where I built an internal tool to expedite the debugging process for developers. "
                 }
               </span>
               <br /> <br />
