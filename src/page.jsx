@@ -38,10 +38,10 @@ const work = [
     name: "Cohesity",
     link: "https://www.cohesity.com",
     role: "Software Engineering Intern",
-    dates: "May 2024 - Present",
+    dates: "May 2024 - Dec. 2024",
     location: "San Jose, CA",
     description:
-      "I am currently developing a Python microservice for scraping data from multi-node clusters. Alongside this, I am building a Grafana dashboard with customizable panels aimed at reducing debugging time and enhancing developer productivity.",
+      "I developed a Python microservice to scrape and analyze node cluster data, creating a comprehensive Grafana dashboard to significantly enhance developer productivity. I managed systematic release cycles, delivered technical demos to senior stakeholders, and wrote detailed documentation to facilitate smooth developer onboarding and version control.",
     image: <img src={cohesity} className="w-8 h-8 rounded-lg"></img>,
     tags: ["Python", "PostgreSQL", "Grafana", "AWS RDS"],
   },
@@ -194,13 +194,13 @@ const Page = () => {
               <br /> <br />
               <span>
                 {
-                  "I am currently an intern on the Performance Team at Cohesity, where I'm building an internal tool to expedite the debugging process for developers. "
+                  "I just interned on the Performance Team at Cohesity, where I built an internal tool to expedite the debugging process for developers. "
                 }
               </span>
               <br /> <br />
               <span>
                 {
-                  "When I'm not busy with work or school, I like to spend my time building stuff like "
+                  "In my free time, I like to spend my time building stuff like "
                 }
                 <a
                   href="https://projectmodulo.com/"
@@ -232,7 +232,7 @@ const Page = () => {
               <br /> <br />
               <span>
                 {
-                  "If you want to get in touch, feel free to connect with me on LinkedIn or shoot me a message via email!"
+                  "If you want to get in touch, feel free to connect with me on LinkedIn or shoot me an email!"
                 }
               </span>
             </div>
