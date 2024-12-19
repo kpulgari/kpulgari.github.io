@@ -2,7 +2,7 @@ import kpulgari from "./assets/kpulgari.jpeg";
 import cohesity from "./assets/cohesity_logo.jpeg";
 import schwab from "./assets/schwab.png";
 import mortgage_connect from "./assets/mortgage_connect.jpeg";
-import modulo from "./assets/modulo.png";
+import modulo from "./assets/modulo-dark.png";
 import ifi from "./assets/ifi-terminal.jpg";
 import smartshopper from "./assets/smart-shopper.png";
 import wikipedia from "./assets/wikipedia-thumbnail.png";
@@ -41,7 +41,7 @@ const work = [
     dates: "May 2024 - Dec. 2024",
     location: "San Jose, CA",
     description:
-      "I developed a Python microservice to scrape and analyze node cluster data, creating a comprehensive Grafana dashboard to significantly enhance developer productivity. I managed systematic release cycles, delivered technical demos to senior stakeholders, and wrote detailed documentation to facilitate smooth developer onboarding and version control.",
+      "I developed a Python microservice that scrapes cluster data to create a comprehensive Grafana dashboard that highlights performance issues. I managed systematic release cycles, delivered technical demos to senior stakeholders (including a company-wide demo!), and wrote detailed documentation to facilitate smooth developer onboarding and version control.",
     image: <img src={cohesity} className="w-8 h-8 rounded-lg"></img>,
     tags: ["Python", "PostgreSQL", "Grafana", "AWS RDS"],
   },
@@ -85,7 +85,7 @@ const projects = [
     ),
     screenshot: modulo,
     description:
-      "Modulo is a global collaboration platform with tools for task management, roadmapping, and AI-assisted communication. It streamlines work for individual creators and distributed teams.",
+      "Global collaboration platform with tools for task management, roadmapping, and AI-assisted communication. It streamlines work for individual creators and distributed teams.",
     tags: ["Next.js", "JavaScript", "Vertex API", "Firebase", "shadcn"],
   },
   {
@@ -103,8 +103,15 @@ const projects = [
     ),
     screenshot: smartshopper,
     description:
-      "SmartShopper is an AI-powered grocery shopping app featuring SmartSearch, which fetches related items for recipes and categories using natural language queries.",
-    tags: ["React.js", "TypeScript", "Flask", "Tailwind CSS", "Supabase"],
+      "AI-powered grocery shopping app featuring SmartSearch, which fetches related items for recipes and categories using natural language queries via OpenAI's API.",
+    tags: [
+      "React.js",
+      "TypeScript",
+      "Flask",
+      "Tailwind CSS",
+      "Supabase",
+      "OpenAI API",
+    ],
   },
   {
     name: (
@@ -121,7 +128,7 @@ const projects = [
     ),
     screenshot: ifi,
     description:
-      "IFI Terminal provides real-time financial data using APIs like yFinance and Finnhub. It displays customizable tables and modules for comprehensive market insights.",
+      "Provides real-time financial data using APIs like yFinance and Finnhub. It displays customizable tables and modules for comprehensive market insights.",
     tags: ["Python", "Conda"],
   },
   {
@@ -139,7 +146,7 @@ const projects = [
     ),
     screenshot: wikipedia,
     description:
-      "C++ program that analyzes Wikipedia's connectivity with BFS, IDDFS, and PageRank algorithms using the SNAP Dataset. It demonstrates large-scale data processing and graph traversal algorithms.",
+      "Analyzes Wikipedia's connectivity with BFS, IDDFS, and PageRank algorithms using the SNAP Dataset. It demonstrates large-scale data processing and graph traversal algorithms.",
     tags: ["C++", "Catch2"],
   },
 ];
@@ -159,7 +166,7 @@ const Page = () => {
                 Kaushik Pulgari
               </h1>
               <p className="lg:text-sm md:text-sm text-xs">
-                {"SWE Intern @ Cohesity | CS + Economics @ UIUC '25"}
+                {"CS + Economics @ UIUC '25"}
               </p>
             </div>
             <div className="flex flex-row items-center justify-left space-x-1">
@@ -170,7 +177,7 @@ const Page = () => {
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md text-sm bg-gray-200/50 hover:bg-gray-300 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
+                  className="p-2 rounded-md text-sm bg-lightAccent/25 hover:bg-lightAccent/50 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
                 >
                   <div className="w-fit h-4 text-center items-center justify-center flex">
                     {button.icon}
@@ -188,19 +195,17 @@ const Page = () => {
             <div>
               <span>
                 {
-                  "Hey! 👋 I'm Kaushik, a senior studying Computer Science + Economics at the University of Illinois Urbana-Champaign with experience in developing and testing software. "
+                  "Hey! 👋 I'm Kaushik, a senior studying Computer Science + Economics at the University of Illinois Urbana-Champaign. "
                 }
               </span>
-              <br /> <br />
               <span>
                 {
-                  "I recently interned on the Performance Team at Cohesity, where I built an internal tool to expedite the debugging process for developers. "
+                  "I recently interned on the Performance Team at Cohesity, where I built an internal tool to expedite debugging for developers."
                 }
               </span>
-              <br /> <br />
               <span>
                 {
-                  "In my free time, I like to spend my time building stuff like "
+                  " In my free time, I like to spend my time building stuff like "
                 }
                 <a
                   href="https://projectmodulo.com/"
@@ -219,14 +224,11 @@ const Page = () => {
                 >
                   Nick
                 </a>
-                {
-                  " - which helps creators connect with others across the world."
-                }
+                .
               </span>
-              <br /> <br />
               <span>
                 {
-                  "Beyond code, I'm a sports enthusiast (although my favorite teams never seem to win!), experimental cook, gym aficionado, and virtual globe-trotter via Google Maps. "
+                  " Beyond code, I'm a sports enthusiast (although my favorite teams never seem to win!), experimental cook, gym aficionado, and virtual globe-trotter via Google Maps. "
                 }
               </span>
               <br /> <br />
@@ -279,7 +281,7 @@ const Page = () => {
                     {w["tags"].map((tag, index) => (
                       <div
                         key={index}
-                        className="bg-gray-200/75 dark:bg-gray-200/20 font-semibold px-2 py-1 rounded-md"
+                        className="bg-lightAccent/25 dark:bg-gray-200/20 font-semibold px-2 py-1 rounded-md"
                       >
                         {tag}
                       </div>
@@ -299,7 +301,7 @@ const Page = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col border dark:border-gray-100/20 rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
+              className="flex flex-col border-lightAccent/25 border dark:border-gray-100/20 rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
             >
               <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center rounded-lg">
                 <img
@@ -317,7 +319,7 @@ const Page = () => {
                   {project["tags"].map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="bg-gray-200/75 dark:bg-gray-200/20 px-2 py-1 font-semibold rounded-md text-xs"
+                      className="bg-lightAccent/25 dark:bg-gray-200/20 px-2 py-1 font-semibold rounded-md text-xs"
                     >
                       {tag}
                     </span>

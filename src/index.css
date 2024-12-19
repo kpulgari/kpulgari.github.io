@@ -7,9 +7,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: #f1f0e8;
 }
 
 .dark {
-  background-color: rgba(0, 0, 10);
+  background-color: #1e201e;
 }
