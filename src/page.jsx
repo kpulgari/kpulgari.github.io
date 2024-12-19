@@ -177,7 +177,7 @@ const Page = () => {
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md text-sm bg-lightAccent/25 hover:bg-lightAccent/50 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 transition-colors duration-200 cursor-pointer"
+                  className="p-2 rounded-md text-sm bg-lightAccent/25 hover:bg-lightAccent/50 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 duration-200 cursor-pointer"
                 >
                   <div className="w-fit h-4 text-center items-center justify-center flex">
                     {button.icon}

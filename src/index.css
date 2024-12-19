@@ -8,6 +8,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f1f0e8;
+  transition: background-color 0.1s ease-out;
 }
 
 .dark {
