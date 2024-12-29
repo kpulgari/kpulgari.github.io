@@ -155,7 +155,7 @@ const Page = () => {
   return (
     <main className="flex flex-col items-center">
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
-        <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center lg:space-x-16 md:space-x-12 space-x-8">
+        <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center lg:space-x-10 md:space-x-10 space-x-8">
           <img
             src={kpulgari}
             className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28"
