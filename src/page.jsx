@@ -29,7 +29,7 @@ const buttons = [
   {
     name: "Resume",
     icon: <span className="text-xs font-semibold">Resume</span>,
-    link: "https://drive.google.com/file/d/15NP1jBymtQJSDIcXOGvtgsQwWvojh-DV/view?usp=sharing",
+    link: "/resume.pdf",
   },
 ];
 
