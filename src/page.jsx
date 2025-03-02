@@ -6,6 +6,7 @@ import modulo from "./assets/modulo-dark.png";
 import ifi from "./assets/ifi-terminal.jpg";
 import smartshopper from "./assets/smart-shopper.png";
 import wikipedia from "./assets/wikipedia-thumbnail.png";
+import magellan from "./assets/magellan.png";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
@@ -70,6 +71,24 @@ const work = [
 ];
 
 const projects = [
+  {
+    name: (
+      <div className="flex flex-row items-center space-x-2">
+        <span>Magellan</span>
+        <a
+          href="https://github.com/NickTrapp/Magellan"
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <FaGithub className="w-3 h-3"></FaGithub>
+        </a>
+      </div>
+    ),
+    screenshot: magellan,
+    description:
+      "Chrome extension that lets you search pages using natural language, find relevant sentences, highlight them, and navigate seamlessly. No exact words needed. Just search how you think!",
+    tags: ["JavaScript", "Flask", "Google Chrome API", "HTML"],
+  },
   {
     name: (
       <div className="flex flex-row items-center space-x-2">
@@ -234,9 +253,24 @@ const Page = () => {
               <br /> <br />
               <span>
                 {
-                  "If you want to get in touch, feel free to connect with me on LinkedIn or shoot me an email!"
+                  "If you want to get in touch, feel free to connect with me on "
                 }
               </span>
+              <a
+                href="http://linkedin.com/in/kpulgari/"
+                target="_blank"
+                className="underline underline-offset-2 font-semibold"
+              >
+                LinkedIn
+              </a>
+              <span>{" or shoot me an "}</span>
+              <a
+                href="mailto:kaushikpulgari@yahoo.com"
+                target="_blank"
+                className="underline underline-offset-2 font-semibold"
+              >
+                email!
+              </a>
             </div>
           </div>
         </div>
@@ -303,19 +337,18 @@ const Page = () => {
               key={index}
               className="flex flex-col border-lightAccent/25 border dark:border-gray-100/20 rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
             >
-              <div className="lg:h-48 md:h-80 h-56 flex items-center justify-center rounded-lg">
+              <div className="lg:h-44 md:h-80 h-56 flex items-center justify-center rounded-lg">
                 <img
-                  src={project["screenshot"]}
-                  alt="project screenshot"
-                  className="w-full h-full object-cover object-top rounded-lg rounded-b-none"
+                  src={project.screenshot}
+                  className="lg:h-40 h-full w-full object-top max-w-full rounded-lg rounded-b-none mb-1"
                 />
               </div>
               <div className="flex flex-col h-full p-2 justify-between">
-                <div className="space-y-2 mb-4">
+                <div className="space-y-2 mb-2">
                   <h3 className="font-bold text-lg">{project["name"]}</h3>
                   <p className="text-sm">{project["description"]}</p>
                 </div>
-                <div className="flex flex-wrap gap-1">
+                <div className="flex flex-wrap gap-1 mb-2">
                   {project["tags"].map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
