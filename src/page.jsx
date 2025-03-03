@@ -80,7 +80,7 @@ const projects = [
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <FaGithub className="w-3 h-3"></FaGithub>
+          {/* <FaGithub className="w-3 h-3"></FaGithub> */}
         </a>
       </div>
     ),
