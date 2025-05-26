@@ -79,6 +79,7 @@ const projects = [
         <a
           href="https://kpulgari.com/magellan/"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:underline underline-offset-2"
         >
           <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
@@ -97,6 +98,7 @@ const projects = [
         <a
           href="https://projectmodulo.com/"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:underline underline-offset-2"
         >
           <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
@@ -115,6 +117,7 @@ const projects = [
         <a
           href="https://github.com/kpulgari/smart-shopper"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:underline underline-offset-2"
         >
           <FaGithub className="w-4 h-4"></FaGithub>
@@ -140,6 +143,7 @@ const projects = [
         <a
           href="https://github.com/kpulgari/ifi-terminal"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:underline underline-offset-2"
         >
           <FaGithub className="w-4 h-4"></FaGithub>
@@ -158,6 +162,7 @@ const projects = [
         <a
           href="https://github.com/kpulgari/linking-wikipedia-pages"
           target="_blank"
+          rel="noopener noreferrer"
           className="hover:underline underline-offset-2"
         >
           <FaGithub className="w-4 h-4"></FaGithub>
@@ -175,10 +180,11 @@ const Page = () => {
   return (
     <main className="flex flex-col items-center bg-gray-50 dark:bg-gray-900 min-h-screen">
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
-        <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center lg:space-x-10 md:space-x-10 space-x-8">
+        <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center space-x-4 md:space-x-8 lg:space-x-10">
           <img
             src={kpulgari}
             className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 ring-4 ring-gray-200 dark:ring-gray-800"
+            alt="Kaushik Pulgari"
           ></img>
           <div className="text-left space-y-3">
             <div className="space-y-1">
@@ -189,7 +195,7 @@ const Page = () => {
                 {"CS + Economics @ UIUC '25"}
               </p>
             </div>
-            <div className="flex flex-row items-center justify-left space-x-2">
+            <div className="flex flex-row items-center justify-left space-x-1 sm:space-x-2">
               <ThemeToggle></ThemeToggle>
               {buttons.map((button, index) => (
                 <a
@@ -228,6 +234,7 @@ const Page = () => {
                 <a
                   href="https://projectmodulo.com/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
                 >
                   Modulo
@@ -238,6 +245,7 @@ const Page = () => {
                 <a
                   href="https://nicktrapp.com/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
                 >
                   Nick
@@ -256,6 +264,7 @@ const Page = () => {
                 <a
                   href="http://linkedin.com/in/kpulgari/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
                 >
                   LinkedIn
@@ -264,6 +273,7 @@ const Page = () => {
                 <a
                   href="mailto:kaushikpulgari@yahoo.com"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
                 >
                   email!
@@ -281,7 +291,7 @@ const Page = () => {
           </h2>
           <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
             <div className="flex flex-col space-y-3">
-              <div className="justify-between w-full flex items-center">
+              <div className="flex flex-col md:flex-row md:justify-between w-full md:items-start">
                 <div>
                   <div className="flex flex-row space-x-3 items-center">
                     <img
@@ -295,6 +305,7 @@ const Page = () => {
                         <a
                           href="https://illinois.edu"
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                         >
                           <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
@@ -306,7 +317,7 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-                <div className="text-right">
+                <div className="text-left md:text-right mt-2 md:mt-0">
                   <div className="text-xs lg:text-sm md:text-sm font-medium text-gray-900 dark:text-white">
                     Aug. 2021 - May 2025
                   </div>
@@ -316,9 +327,9 @@ const Page = () => {
                 </div>
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                Relevant Coursework: Data Structures & Algorithms, Computer
-                Architecture, Database Systems, Machine Learning, Distributed
-                Systems, Cloud Computing Applications
+                Relevant Coursework: Data Structures & Algorithms, Database
+                Systems, Machine Learning, Distributed Systems, Cloud Computing
+                Applications
               </div>
               <div className="flex-wrap flex flex-row gap-2">
                 <div className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
@@ -351,7 +362,7 @@ const Page = () => {
                 className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 <div className="flex flex-col space-y-3">
-                  <div className="justify-between w-full flex items-center">
+                  <div className="flex flex-col md:flex-row md:justify-between w-full md:items-start">
                     <div>
                       <div className="flex flex-row space-x-3 items-center">
                         {w["image"]}
@@ -361,6 +372,7 @@ const Page = () => {
                             <a
                               href={w["link"]}
                               target="_blank"
+                              rel="noopener noreferrer"
                               className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                             >
                               <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
@@ -372,7 +384,7 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-left md:text-right mt-2 md:mt-0">
                       <div className="text-xs lg:text-sm md:text-sm font-medium text-gray-900 dark:text-white">
                         {w["dates"]}
                       </div>
@@ -385,9 +397,9 @@ const Page = () => {
                     {w["description"]}
                   </div>
                   <div className="flex-wrap flex flex-row gap-2">
-                    {w["tags"].map((tag, index) => (
+                    {w["tags"].map((tag, tagIndex) => (
                       <div
-                        key={index}
+                        key={tagIndex}
                         className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300"
                       >
                         {tag}
@@ -414,12 +426,15 @@ const Page = () => {
               <div className="lg:h-56 md:h-80 h-64 flex items-center justify-center overflow-hidden">
                 <img
                   src={project.screenshot}
+                  alt={`${project.name} screenshot`}
                   className="h-full w-full object-cover"
                 />
               </div>
               <div className="flex flex-col p-4 space-y-3">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-lg">{project["name"]}</h3>
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                    {project["name"]}
+                  </h3>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   {project["description"]}
