@@ -7,6 +7,7 @@ import ifi from "./assets/ifi-terminal.jpg";
 import smartshopper from "./assets/smart-shopper.png";
 import wikipedia from "./assets/wikipedia-thumbnail.png";
 import magellan from "./assets/magellan.png";
+import illinois from "./assets/illinois.png";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
@@ -76,18 +77,18 @@ const projects = [
       <div className="flex flex-row items-center space-x-2">
         <span>Magellan</span>
         <a
-          href="https://github.com/NickTrapp/Magellan"
+          href="https://kpulgari.com/magellan/"
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          {/* <FaGithub className="w-3 h-3"></FaGithub> */}
+          <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
         </a>
       </div>
     ),
     screenshot: magellan,
     description:
       "Chrome extension that lets you search pages using natural language, find relevant sentences, highlight them, and navigate seamlessly. No exact words needed. Just search how you think!",
-    tags: ["JavaScript", "Flask", "Google Chrome API", "HTML"],
+    tags: ["JavaScript", "Flask", "Google Chrome API", "AWS EC2"],
   },
   {
     name: (
@@ -172,23 +173,23 @@ const projects = [
 
 const Page = () => {
   return (
-    <main className="flex flex-col items-center">
-      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
+    <main className="flex flex-col items-center bg-gray-50 dark:bg-gray-900 min-h-screen">
+      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
         <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center lg:space-x-10 md:space-x-10 space-x-8">
           <img
             src={kpulgari}
-            className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28"
+            className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 ring-4 ring-gray-200 dark:ring-gray-800"
           ></img>
-          <div className="text-left space-y-2">
+          <div className="text-left space-y-3">
             <div className="space-y-1">
-              <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold">
+              <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-900 dark:text-white">
                 Kaushik Pulgari
               </h1>
-              <p className="lg:text-sm md:text-sm text-xs">
+              <p className="lg:text-sm md:text-sm text-xs text-gray-600 dark:text-gray-400">
                 {"CS + Economics @ UIUC '25"}
               </p>
             </div>
-            <div className="flex flex-row items-center justify-left space-x-1">
+            <div className="flex flex-row items-center justify-left space-x-2">
               <ThemeToggle></ThemeToggle>
               {buttons.map((button, index) => (
                 <a
@@ -196,7 +197,7 @@ const Page = () => {
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md text-sm bg-lightAccent/25 hover:bg-lightAccent/50 dark:bg-gray-200/20 dark:hover:bg-gray-200/10 duration-200 cursor-pointer"
+                  className="p-2 rounded-md text-sm bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 shadow-sm transition-all duration-200"
                 >
                   <div className="w-fit h-4 text-center items-center justify-center flex">
                     {button.icon}
@@ -207,29 +208,27 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
-        <div className="flex flex-col gap-2">
-          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl">About</h2>
-          <div className="flex flex-row items-center justify-left text-sm">
-            <div>
-              <span>
+
+      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white">
+            About
+          </h2>
+          <div className="flex flex-row items-center justify-left text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+            <div className="space-y-3">
+              <p>
                 {
-                  "Hey! 👋 I'm Kaushik, a senior studying Computer Science + Economics at the University of Illinois Urbana-Champaign. "
+                  "Hey! 👋 I'm Kaushik, a CS + Economics grad from the University of Illinois Urbana-Champaign. "
                 }
-              </span>
-              <span>
+              </p>
+              <p>
                 {
-                  "I recently interned on the Performance Team at Cohesity, where I built an internal tool to expedite debugging for developers."
-                }
-              </span>
-              <span>
-                {
-                  " In my free time, I like to spend my time building stuff like "
+                  "In my free time, I like to spend my time building stuff like "
                 }
                 <a
                   href="https://projectmodulo.com/"
                   target="_blank"
-                  className="underline underline-offset-2 font-semibold"
+                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
                 >
                   Modulo
                 </a>
@@ -239,83 +238,157 @@ const Page = () => {
                 <a
                   href="https://nicktrapp.com/"
                   target="_blank"
-                  className="underline underline-offset-2 font-semibold"
+                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
                 >
                   Nick
                 </a>
                 .
-              </span>
-              <span>
+              </p>
+              <p>
                 {
-                  " Beyond code, I'm a sports enthusiast (although my favorite teams never seem to win!), experimental cook, gym aficionado, and virtual globe-trotter via Google Maps. "
+                  "Beyond code, I'm a sports enthusiast (although my favorite teams never seem to win!), experimental cook, gym aficionado, and virtual globe-trotter via Google Maps."
                 }
-              </span>
-              <br /> <br />
-              <span>
+              </p>
+              <p>
                 {
                   "If you want to get in touch, feel free to connect with me on "
                 }
-              </span>
-              <a
-                href="http://linkedin.com/in/kpulgari/"
-                target="_blank"
-                className="underline underline-offset-2 font-semibold"
-              >
-                LinkedIn
-              </a>
-              <span>{" or shoot me an "}</span>
-              <a
-                href="mailto:kaushikpulgari@yahoo.com"
-                target="_blank"
-                className="underline underline-offset-2 font-semibold"
-              >
-                email!
-              </a>
+                <a
+                  href="http://linkedin.com/in/kpulgari/"
+                  target="_blank"
+                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
+                >
+                  LinkedIn
+                </a>
+                {" or shoot me an "}
+                <a
+                  href="mailto:kaushikpulgari@yahoo.com"
+                  target="_blank"
+                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
+                >
+                  email!
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
-        <div className="flex flex-col gap-2">
-          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl">
+
+      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white">
+            Education
+          </h2>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <div className="flex flex-col space-y-3">
+              <div className="justify-between w-full flex items-center">
+                <div>
+                  <div className="flex flex-row space-x-3 items-center">
+                    <img
+                      src={illinois}
+                      className="w-8 h-8 rounded-lg"
+                      alt="UIUC Logo"
+                    />
+                    <div>
+                      <div className="font-bold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
+                        <div>University of Illinois Urbana-Champaign</div>
+                        <a
+                          href="https://illinois.edu"
+                          target="_blank"
+                          className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                        >
+                          <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
+                        </a>
+                      </div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">
+                        B.S. Computer Science & Economics
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <div className="text-xs lg:text-sm md:text-sm font-medium text-gray-900 dark:text-white">
+                    Aug. 2021 - May 2025
+                  </div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">
+                    GPA: 3.98/4.00
+                  </div>
+                </div>
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                Relevant Coursework: Data Structures & Algorithms, Computer
+                Architecture, Database Systems, Machine Learning, Distributed
+                Systems, Cloud Computing Applications
+              </div>
+              <div className="flex-wrap flex flex-row gap-2">
+                <div className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
+                  Magna Cum Laude
+                </div>
+                <div className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
+                  Phi Beta Kappa
+                </div>
+                <div className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
+                  ACM
+                </div>
+                <div className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
+                  Asha for Education
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white">
             Experience
           </h2>
-          <div className="flex flex-row items-center justify-center flex-wrap space-y-2">
+          <div className="flex flex-col space-y-4">
             {work.map((w, index) => (
-              <div key={index} className="py-2 w-full rounded-md text-sm">
-                <div className="flex flex-col space-y-2">
+              <div
+                key={index}
+                className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200"
+              >
+                <div className="flex flex-col space-y-3">
                   <div className="justify-between w-full flex items-center">
                     <div>
-                      <div className="flex flex-row space-x-2 items-center">
+                      <div className="flex flex-row space-x-3 items-center">
                         {w["image"]}
                         <div>
-                          <div className="font-bold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2">
+                          <div className="font-bold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
                             <div>{w["name"]}</div>
-                            <a href={w["link"]} target="_blank">
+                            <a
+                              href={w["link"]}
+                              target="_blank"
+                              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                            >
                               <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
                             </a>
                           </div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400 italic">
+                          <div className="text-xs text-gray-600 dark:text-gray-400">
                             {w["role"]}
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-xs lg:text-sm md:text-sm font-bold">
+                      <div className="text-xs lg:text-sm md:text-sm font-medium text-gray-900 dark:text-white">
                         {w["dates"]}
                       </div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400 italic">
+                      <div className="text-xs text-gray-600 dark:text-gray-400">
                         {w["location"]}
                       </div>
                     </div>
                   </div>
-                  <div className="text-sm">{w["description"]}</div>
-                  <div className="flex-wrap flex flex-row gap-1 text-xs">
+                  <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {w["description"]}
+                  </div>
+                  <div className="flex-wrap flex flex-row gap-2">
                     {w["tags"].map((tag, index) => (
                       <div
                         key={index}
-                        className="bg-lightAccent/25 dark:bg-gray-200/20 font-semibold px-2 py-1 rounded-md"
+                        className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300"
                       >
                         {tag}
                       </div>
@@ -327,32 +400,35 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-8">
-        <h2 className="font-bold lg:text-2xl md:text-2xl text-xl mb-4">
+
+      <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12 mb-16">
+        <h2 className="font-bold lg:text-2xl md:text-2xl text-xl mb-4 text-gray-900 dark:text-white">
           Projects
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col border-lightAccent/25 border dark:border-gray-100/20 rounded-lg hover:shadow-md transition-shadow duration-200 overflow-hidden"
+              className="flex flex-col border-lightAccent/25 border dark:border-gray-100/20 rounded-t-lg hover:shadow-md transition-shadow duration-200 overflow-hidden bg-white dark:bg-gray-900"
             >
-              <div className="lg:h-44 md:h-80 h-56 flex items-center justify-center rounded-lg">
+              <div className="lg:h-56 md:h-80 h-64 flex items-center justify-center overflow-hidden">
                 <img
                   src={project.screenshot}
-                  className="lg:h-40 h-full w-full object-top max-w-full rounded-lg rounded-b-none mb-1"
+                  className="h-full w-full object-cover"
                 />
               </div>
-              <div className="flex flex-col h-full p-2 justify-between">
-                <div className="space-y-2 mb-2">
+              <div className="flex flex-col p-4 space-y-3">
+                <div className="flex items-center justify-between">
                   <h3 className="font-bold text-lg">{project["name"]}</h3>
-                  <p className="text-sm">{project["description"]}</p>
                 </div>
-                <div className="flex flex-wrap gap-1 mb-2">
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {project["description"]}
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
                   {project["tags"].map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="bg-lightAccent/25 dark:bg-gray-200/20 px-2 py-1 font-semibold rounded-md text-xs"
+                      className="bg-lightAccent/10 dark:bg-gray-200/10 px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300"
                     >
                       {tag}
                     </span>

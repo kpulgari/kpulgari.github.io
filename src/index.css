@@ -7,10 +7,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f1f0e8;
-  transition: background-color 0.1s ease-out;
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease-out;
 }
 
 .dark {
-  background-color: #1e201e;
+  background-color: #111827;
 }
