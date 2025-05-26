@@ -197,7 +197,7 @@ const Page = () => {
                   href={button.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-md text-sm bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 shadow-sm transition-all duration-200"
+                  className="p-2 rounded-md text-sm bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 shadow-sm"
                 >
                   <div className="w-fit h-4 text-center items-center justify-center flex">
                     {button.icon}
