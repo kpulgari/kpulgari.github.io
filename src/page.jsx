@@ -88,8 +88,8 @@ const projects = [
     ),
     screenshot: magellan,
     description:
-      "Chrome extension that lets you search pages using natural language, find relevant sentences, highlight them, and navigate seamlessly. No exact words needed. Just search how you think!",
-    tags: ["JavaScript", "Flask", "Google Chrome API", "AWS EC2"],
+      "Chrome extension that lets you search pages using natural language, finds relevant sentences, highlights them, and navigates seamlessly. No exact words needed. Just search how you think!",
+    tags: ["JavaScript", "Google Chrome API", "Gemini API", "HTML", "CSS"],
   },
   {
     name: (
