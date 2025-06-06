@@ -4,13 +4,13 @@ import schwab from "./assets/schwab.png";
 import mortgage_connect from "./assets/mortgage_connect.jpeg";
 import modulo from "./assets/modulo-dark.png";
 import ifi from "./assets/ifi-terminal.jpg";
-import smartshopper from "./assets/smart-shopper.png";
 import wikipedia from "./assets/wikipedia-thumbnail.png";
 import magellan from "./assets/magellan.png";
 import illinois from "./assets/illinois.png";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
+import Background from "./components/Background";
 
 const buttons = [
   {
@@ -54,7 +54,7 @@ const work = [
     dates: "Jun. 2023 - Aug. 2023",
     location: "St. Louis, MO",
     description:
-      "I improved the user experience during the TDA-Schwab merger by optimizing ASP.NET and Angular.js applications which handle over 20,000 users per minute. I integrated a new logging library and created unit tests to increase code coverage and reduce bugs in frontend and backend systems.",
+      "I improved UX during the TDA-Schwab merger by optimizing ASP.NET and Angular.js applications which handle over 20,000 users per minute. I integrated a new logging library and created unit tests to increase code coverage and reduce bugs in frontend and backend systems.",
     image: <img src={schwab} className="w-8 h-8 rounded-lg"></img>,
     tags: ["ASP.NET", "Angular.js", "C#", "JavaScript"],
   },
@@ -76,19 +76,29 @@ const projects = [
     name: (
       <div className="flex flex-row items-center space-x-2">
         <span>Magellan</span>
-        <a
-          href="https://kpulgari.com/magellan/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline underline-offset-2"
-        >
-          <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
-        </a>
+        <div className="flex space-x-2">
+          <a
+            href="https://kpulgari.com/magellan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
+          >
+            <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
+          </a>
+          <a
+            href="https://github.com/magellan-extension/magellan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1.5 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
+          >
+            <FaGithub className="w-4 h-4"></FaGithub>
+          </a>
+        </div>
       </div>
     ),
     screenshot: magellan,
     description:
-      "Chrome extension that lets you search pages using natural language, finds relevant sentences, highlights them, and navigates seamlessly. No exact words needed. Just search how you think!",
+      "Open-source Chrome extension that brings conversational AI to web browsing. Ask questions about any webpage and get AI-powered answers with smart citations, context-aware tabs, and seamless navigation.",
     tags: ["JavaScript", "Google Chrome API", "Gemini API", "HTML", "CSS"],
   },
   {
@@ -99,7 +109,7 @@ const projects = [
           href="https://projectmodulo.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline underline-offset-2"
+          className="p-1.5 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
         >
           <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
         </a>
@@ -113,38 +123,12 @@ const projects = [
   {
     name: (
       <div className="flex flex-row items-center space-x-2">
-        <span>SmartShopper</span>
-        <a
-          href="https://github.com/kpulgari/smart-shopper"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline underline-offset-2"
-        >
-          <FaGithub className="w-4 h-4"></FaGithub>
-        </a>
-      </div>
-    ),
-    screenshot: smartshopper,
-    description:
-      "AI-powered grocery shopping app featuring SmartSearch, which fetches related items for recipes and categories using natural language queries via OpenAI's API.",
-    tags: [
-      "React.js",
-      "TypeScript",
-      "Flask",
-      "Tailwind CSS",
-      "Supabase",
-      "OpenAI API",
-    ],
-  },
-  {
-    name: (
-      <div className="flex flex-row items-center space-x-2">
         <span>IFI Terminal</span>
         <a
           href="https://github.com/kpulgari/ifi-terminal"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline underline-offset-2"
+          className="p-1.5 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
         >
           <FaGithub className="w-4 h-4"></FaGithub>
         </a>
@@ -163,7 +147,7 @@ const projects = [
           href="https://github.com/kpulgari/linking-wikipedia-pages"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline underline-offset-2"
+          className="p-1.5 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
         >
           <FaGithub className="w-4 h-4"></FaGithub>
         </a>
@@ -178,7 +162,8 @@ const projects = [
 
 const Page = () => {
   return (
-    <main className="flex flex-col items-center bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <main className="flex flex-col items-center min-h-screen relative">
+      <Background />
       <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
         <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center space-x-4 md:space-x-8 lg:space-x-10">
           <img
@@ -232,6 +217,17 @@ const Page = () => {
                   "In my free time, I like to spend my time building stuff like "
                 }
                 <a
+                  href="https://kpulgari.com/magellan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
+                >
+                  Magellan
+                </a>
+                {
+                  " - an open-source Chrome extension that enables natural language search within web pages - and "
+                }
+                <a
                   href="https://projectmodulo.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -239,18 +235,7 @@ const Page = () => {
                 >
                   Modulo
                 </a>
-                {
-                  " - a project management & collaboration tool I developed with my friend "
-                }
-                <a
-                  href="https://nicktrapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
-                >
-                  Nick
-                </a>
-                .
+                {", a project management & collaboration tool."}
               </p>
               <p>
                 {
