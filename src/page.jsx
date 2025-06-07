@@ -205,65 +205,67 @@ const Page = () => {
           <h2 className="font-bold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white">
             About
           </h2>
-          <div className="flex flex-row items-center justify-left text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-            <div className="space-y-3">
-              <p>
-                {
-                  "Hey! 👋 I'm Kaushik, a CS + Economics grad from the University of Illinois Urbana-Champaign. "
-                }
-              </p>
-              <p>
-                {
-                  "In my free time, I like to spend my time building stuff like "
-                }
-                <a
-                  href="https://kpulgari.com/magellan/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
-                >
-                  Magellan
-                </a>
-                {
-                  " - an open-source Chrome extension that enables natural language search within web pages - and "
-                }
-                <a
-                  href="https://projectmodulo.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
-                >
-                  Modulo
-                </a>
-                {", a project management & collaboration tool."}
-              </p>
-              <p>
-                {
-                  "Beyond code, I'm a sports enthusiast (although my favorite teams never seem to win!), experimental cook, gym aficionado, and virtual globe-trotter via Google Maps."
-                }
-              </p>
-              <p>
-                {
-                  "If you want to get in touch, feel free to connect with me on "
-                }
-                <a
-                  href="http://linkedin.com/in/kpulgari/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
-                >
-                  LinkedIn
-                </a>
-                {" or shoot me an "}
-                <a
-                  href="mailto:kaushikpulgari@yahoo.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
-                >
-                  email!
-                </a>
-              </p>
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <div className="flex flex-row items-center justify-left text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              <div className="space-y-3">
+                <p>
+                  {
+                    "Hey! 👋 I'm Kaushik, a CS + Economics grad from the University of Illinois Urbana-Champaign. "
+                  }
+                </p>
+                <p>
+                  {
+                    "In my free time, I like to spend my time building stuff like "
+                  }
+                  <a
+                    href="https://kpulgari.com/magellan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
+                  >
+                    Magellan
+                  </a>
+                  {
+                    " - an open-source Chrome extension that enables natural language search within web pages - and "
+                  }
+                  <a
+                    href="https://projectmodulo.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
+                  >
+                    Modulo
+                  </a>
+                  {", a project management & collaboration tool."}
+                </p>
+                <p>
+                  {
+                    "Beyond code, I'm a sports enthusiast (although my favorite teams never seem to win!), experimental cook, gym aficionado, and virtual globe-trotter via Google Maps."
+                  }
+                </p>
+                <p>
+                  {
+                    "If you want to get in touch, feel free to connect with me on "
+                  }
+                  <a
+                    href="http://linkedin.com/in/kpulgari/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
+                  >
+                    LinkedIn
+                  </a>
+                  {" or shoot me an "}
+                  <a
+                    href="mailto:kaushikpulgari@yahoo.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-2 font-medium"
+                  >
+                    email!
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
