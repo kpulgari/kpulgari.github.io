@@ -16,7 +16,7 @@ const buttons = [
   {
     name: "Email",
     icon: <Mail className="w-4 h-4" />,
-    link: "mailto:kaushikpulgari@yahoo.com",
+    link: "mailto:kaushik.pulgari@gmail.com",
   },
   {
     name: "LinkedIn",
