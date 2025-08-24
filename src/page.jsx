@@ -10,6 +10,7 @@ import illinois from "./assets/illinois.png";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
+import InteractiveBackground from "./components/Background";
 
 const buttons = [
   {
@@ -173,7 +174,7 @@ const AnimatedBeam = ({ delay = 0, duration = 4, opacity = 0.1 }) => (
 );
 
 const BackgroundBeams = () => (
-  <div className="fixed inset-0 pointer-events-none overflow-hidden dark:block hidden">
+  <div className="fixed inset-0 pointer-events-none overflow-hidden">
     <style jsx>{`
       @keyframes beam {
         0% {
@@ -202,7 +203,7 @@ const BackgroundBeams = () => (
         <AnimatedBeam
           delay={i * 0.8}
           duration={4 + (i % 3)}
-          opacity={0.04 + (i % 2) * 0.02}
+          opacity={0.15 + (i % 2) * 0.05}
         />
       </div>
     ))}
@@ -217,7 +218,7 @@ const BackgroundBeams = () => (
           className="absolute pointer-events-none w-0.5 h-full"
           style={{
             background: `linear-gradient(180deg, transparent, rgba(59, 130, 246, ${
-              0.03 + (i % 3) * 0.02
+              0.12 + (i % 3) * 0.08
             }), transparent)`,
             height: "200%",
             animation: `beamVertical ${6 + (i % 4)}s linear infinite`,
@@ -233,7 +234,7 @@ const BackgroundBeams = () => (
         className="absolute left-0 w-full"
         style={{ top: `${20 + i * 20}%` }}
       >
-        <AnimatedBeam delay={i * 0.3} duration={2 + (i % 2)} opacity={0.03} />
+        <AnimatedBeam delay={i * 0.3} duration={2 + (i % 2)} opacity={0.1} />
       </div>
     ))}
 
@@ -242,7 +243,7 @@ const BackgroundBeams = () => (
         <div
           className="absolute pointer-events-none"
           style={{
-            background: `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.025), transparent)`,
+            background: `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.08), transparent)`, // Increased from 0.025
             width: "300%",
             height: "1px",
             top: `${15 + i * 25}%`,
@@ -263,7 +264,7 @@ const BackgroundBeams = () => (
         <div
           className="absolute pointer-events-none"
           style={{
-            background: `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.025), transparent)`,
+            background: `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.08), transparent)`, // Increased from 0.025
             width: "300%",
             height: "1px",
             top: `${30 + i * 30}%`,
@@ -276,13 +277,13 @@ const BackgroundBeams = () => (
       </div>
     ))}
 
-    <div className="absolute inset-0 opacity-15">
+    <div className="absolute inset-0 opacity-30 dark:opacity-15">
       <div
         className="w-full h-full"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.015) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.015) 1px, transparent 1px)
+            linear-gradient(rgba(59, 130, 246, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.06) 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
@@ -294,7 +295,8 @@ const BackgroundBeams = () => (
 const Page = () => {
   return (
     <div className="relative">
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
+      <InteractiveBackground></InteractiveBackground>
       <main className="flex flex-col items-center min-h-screen relative z-10">
         <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
           <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center space-x-4 md:space-x-8 lg:space-x-10">
