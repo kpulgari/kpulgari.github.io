@@ -39,11 +39,21 @@ const work = [
   {
     name: "Cohesity",
     link: "https://www.cohesity.com",
+    role: "Software Engineer (MTS I)",
+    dates: "Jun. 2025 - Present",
+    location: "Santa Clara, CA",
+    description: "Working on distributed file systems.",
+    image: <img src={cohesity} className="w-8 h-8 rounded-lg"></img>,
+    tags: ["C++", "RPC"],
+  },
+  {
+    name: "Cohesity",
+    link: "https://www.cohesity.com",
     role: "Software Engineering Intern",
     dates: "May 2024 - Dec. 2024",
     location: "San Jose, CA",
     description:
-      "I developed a Python microservice that scrapes cluster data to create a comprehensive Grafana dashboard that highlights performance issues. I managed systematic release cycles, delivered technical demos to senior stakeholders (including a company-wide demo!), and wrote detailed documentation to facilitate smooth developer onboarding and version control.",
+      "Built a Python microservice for cluster data ingestion and Grafana visualization to identify performance bottlenecks. Managed release pipelines, delivered technical demos to leadership and company-wide audiences, and authored comprehensive documentation for developer onboarding and version control.",
     image: <img src={cohesity} className="w-8 h-8 rounded-lg"></img>,
     tags: ["Python", "PostgreSQL", "Grafana", "AWS RDS"],
   },
@@ -54,7 +64,7 @@ const work = [
     dates: "Jun. 2023 - Aug. 2023",
     location: "St. Louis, MO",
     description:
-      "I improved UX during the TDA-Schwab merger by optimizing ASP.NET and Angular.js applications which handle over 20,000 users per minute. I integrated a new logging library and created unit tests to increase code coverage and reduce bugs in frontend and backend systems.",
+      "Optimized ASP.NET and Angular.js applications handling 20K+ users/minute during the TDA-Schwab merger. Integrated logging framework and implemented comprehensive unit testing to improve code coverage and system reliability across full-stack applications.",
     image: <img src={schwab} className="w-8 h-8 rounded-lg"></img>,
     tags: ["ASP.NET", "Angular.js", "C#", "JavaScript"],
   },
@@ -65,9 +75,9 @@ const work = [
     dates: "Jun. 2022 - Aug. 2022",
     location: "Remote",
     description:
-      "I developed automation scripts for API and UI regression testing using TestNG and Selenium. By implementing TestNG logging, annotations, and error handling, I improved test script quality, maintainability, and debugging efficiency while adhering to automation best practices.",
+      "Built automated regression testing suite using TestNG and Selenium for API and UI validation. Implemented structured logging, annotations, and error handling to enhance test maintainability and debugging efficiency following automation best practices.",
     image: <img src={mortgage_connect} className="w-8 h-8 rounded-lg"></img>,
-    tags: ["Java", "Selenium", "Postman", "HTML"],
+    tags: ["Java", "Selenium", "Postman", "TestNG"],
   },
 ];
 
@@ -98,7 +108,7 @@ const projects = [
     ),
     screenshot: magellan,
     description:
-      "Open-source Chrome extension that brings conversational AI to web browsing. Ask questions about any webpage and get AI-powered answers with smart citations, context-aware tabs, and seamless navigation.",
+      "Open-source Chrome sidebar extension that enables conversational AI for web browsing with contextual Q&A, intelligent citations, and seamless tab navigation.",
     tags: ["JavaScript", "Google Chrome API", "Gemini API", "HTML", "CSS"],
   },
   {
@@ -117,7 +127,7 @@ const projects = [
     ),
     screenshot: modulo,
     description:
-      "Global collaboration platform with tools for task management, roadmapping, and AI-assisted communication. It streamlines work for individual creators and distributed teams.",
+      "Global collaboration platform that features task management, roadmapping, and AI-powered communication tools for individual creators and distributed teams.",
     tags: ["Next.js", "JavaScript", "Vertex API", "Firebase", "shadcn"],
   },
   {
@@ -136,7 +146,7 @@ const projects = [
     ),
     screenshot: ifi,
     description:
-      "Provides real-time financial data using APIs like yFinance and Finnhub. It displays customizable tables and modules for comprehensive market insights.",
+      "Real-time financial data platform that integrates yFinance and Finnhub API with customizable dashboards and modular components for market analysis and insights.",
     tags: ["Python", "Conda"],
   },
   {
@@ -155,147 +165,14 @@ const projects = [
     ),
     screenshot: wikipedia,
     description:
-      "Analyzes Wikipedia's connectivity with BFS, IDDFS, and PageRank algorithms using the SNAP Dataset. It demonstrates large-scale data processing and graph traversal algorithms.",
+      "Page connection tool that uses BFS, IDDFS, and PageRank on SNAP Wikipedia dataset to compute shortest path between pages and analyze network connectivity.",
     tags: ["C++", "Catch2"],
   },
 ];
 
-const AnimatedBeam = ({ delay = 0, duration = 4, opacity = 0.1 }) => (
-  <div
-    className="absolute pointer-events-none"
-    style={{
-      background: `linear-gradient(90deg, transparent, rgba(59, 130, 246, ${opacity}), transparent)`,
-      width: "200%",
-      height: "2px",
-      animation: `beam ${duration}s linear infinite`,
-      animationDelay: `${delay}s`,
-    }}
-  />
-);
-
-const BackgroundBeams = () => (
-  <div className="fixed inset-0 pointer-events-none overflow-hidden">
-    <style jsx>{`
-      @keyframes beam {
-        0% {
-          transform: translateX(-100%);
-        }
-        100% {
-          transform: translateX(100%);
-        }
-      }
-      @keyframes beamVertical {
-        0% {
-          transform: translateY(-100%);
-        }
-        100% {
-          transform: translateY(100%);
-        }
-      }
-    `}</style>
-
-    {[...Array(8)].map((_, i) => (
-      <div
-        key={`h-${i}`}
-        className="absolute left-0 w-full"
-        style={{ top: `${10 + i * 12}%` }}
-      >
-        <AnimatedBeam
-          delay={i * 0.8}
-          duration={4 + (i % 3)}
-          opacity={0.15 + (i % 2) * 0.05}
-        />
-      </div>
-    ))}
-
-    {[...Array(6)].map((_, i) => (
-      <div
-        key={`v-${i}`}
-        className="absolute top-0 h-full w-0.5"
-        style={{ left: `${15 + i * 15}%` }}
-      >
-        <div
-          className="absolute pointer-events-none w-0.5 h-full"
-          style={{
-            background: `linear-gradient(180deg, transparent, rgba(59, 130, 246, ${
-              0.12 + (i % 3) * 0.08
-            }), transparent)`,
-            height: "200%",
-            animation: `beamVertical ${6 + (i % 4)}s linear infinite`,
-            animationDelay: `${i * 1.2}s`,
-          }}
-        />
-      </div>
-    ))}
-
-    {[...Array(5)].map((_, i) => (
-      <div
-        key={`fast-${i}`}
-        className="absolute left-0 w-full"
-        style={{ top: `${20 + i * 20}%` }}
-      >
-        <AnimatedBeam delay={i * 0.3} duration={2 + (i % 2)} opacity={0.1} />
-      </div>
-    ))}
-
-    {[...Array(4)].map((_, i) => (
-      <div key={`diag-${i}`} className="absolute top-0 left-0 w-full h-full">
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            background: `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.08), transparent)`, // Increased from 0.025
-            width: "300%",
-            height: "1px",
-            top: `${15 + i * 25}%`,
-            left: "-50%",
-            transform: `rotate(${10 + i * 5}deg)`,
-            animation: `beam ${8 + i * 2}s linear infinite`,
-            animationDelay: `${i * 2}s`,
-          }}
-        />
-      </div>
-    ))}
-
-    {[...Array(3)].map((_, i) => (
-      <div
-        key={`rev-diag-${i}`}
-        className="absolute top-0 left-0 w-full h-full"
-      >
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            background: `linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.08), transparent)`, // Increased from 0.025
-            width: "300%",
-            height: "1px",
-            top: `${30 + i * 30}%`,
-            left: "-50%",
-            transform: `rotate(${-15 - i * 8}deg)`,
-            animation: `beam ${10 + i * 3}s linear infinite`,
-            animationDelay: `${i * 2.5}s`,
-          }}
-        />
-      </div>
-    ))}
-
-    <div className="absolute inset-0 opacity-30 dark:opacity-15">
-      <div
-        className="w-full h-full"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(59, 130, 246, 0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.06) 1px, transparent 1px)
-          `,
-          backgroundSize: "60px 60px",
-        }}
-      />
-    </div>
-  </div>
-);
-
 const Page = () => {
   return (
     <div className="relative">
-      {/* <BackgroundBeams /> */}
       <InteractiveBackground></InteractiveBackground>
       <main className="flex flex-col items-center min-h-screen relative z-10">
         <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
@@ -311,7 +188,7 @@ const Page = () => {
                   Kaushik Pulgari
                 </h1>
                 <p className="lg:text-sm md:text-sm text-xs text-gray-600 dark:text-gray-400">
-                  {"CS + Economics @ UIUC '25"}
+                  {"SWE @ Cohesity | CS + Econ @ UIUC"}
                 </p>
               </div>
               <div className="flex flex-row items-center justify-left space-x-1 sm:space-x-2">
@@ -344,18 +221,24 @@ const Page = () => {
                 <div className="space-y-3">
                   <p>
                     {
-                      "Hey! 👋 I'm Kaushik, a CS + Economics grad from the University of Illinois Urbana-Champaign. "
+                      "Hey! 👋 I'm Kaushik, a CS + Economics graduate from the University of Illinois Urbana-Champaign. "
                     }
                   </p>
                   <p>
                     {
-                      "I'm currently working as a software engineer on the Data Platform team at Cohesity."
+                      "I'm currently working on the distributed file system team at "
                     }
+                    <a
+                      href="https://cohesity.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sky-blue-accent hover:underline underline-offset-2 font-medium"
+                    >
+                      Cohesity.
+                    </a>
                   </p>
                   <p>
-                    {
-                      "In my free time, I like to spend my time building stuff like "
-                    }
+                    {"I enjoy building stuff like "}
                     <a
                       href="https://kpulgari.com/magellan/"
                       target="_blank"
@@ -365,7 +248,7 @@ const Page = () => {
                       Magellan
                     </a>
                     {
-                      " - an open-source Chrome extension that enables natural language search within web pages - and "
+                      " - a Chrome extension for conversational AI within tabs - and "
                     }
                     <a
                       href="https://projectmodulo.com/"
@@ -379,13 +262,11 @@ const Page = () => {
                   </p>
                   <p>
                     {
-                      "Beyond code, I'm a sports enthusiast (although my favorite teams never seem to win!), experimental cook, gym aficionado, and virtual globe-trotter via Google Maps."
+                      "Beyond code, I'm a sports enthusiast, experimental cook, gym aficionado, and virtual globe-trotter via Google Maps."
                     }
                   </p>
                   <p>
-                    {
-                      "If you want to get in touch, feel free to connect with me on "
-                    }
+                    {"Feel free to connect with me on "}
                     <a
                       href="http://linkedin.com/in/kpulgari/"
                       target="_blank"
@@ -454,8 +335,7 @@ const Page = () => {
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   Relevant Coursework: Data Structures & Algorithms, Database
-                  Systems, Machine Learning, Distributed Systems, Cloud
-                  Computing Applications
+                  Systems, ML, Distributed Systems, Cloud Computing, NLP
                 </div>
                 <div className="flex-wrap flex flex-row gap-2">
                   <div className="pin-tag px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
