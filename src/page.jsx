@@ -177,11 +177,20 @@ const Page = () => {
       <main className="flex flex-col items-center min-h-screen relative z-10">
         <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
           <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center space-x-4 md:space-x-8 lg:space-x-10">
-            <img
-              src={kpulgari}
-              className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 ring-4 ring-sky-200/50 dark:ring-gray-400/30"
-              alt="Kaushik Pulgari"
-            ></img>
+            <div className="relative">
+              <img
+                src={kpulgari}
+                className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 ring-4 ring-sky-200/50 dark:ring-gray-400/30 relative z-10"
+                alt="Kaushik Pulgari"
+              />
+
+              <div
+                className="absolute inset-2 rounded-full bg-gradient-to-r from-sky-400/75 to-blue-500/75 opacity-20"
+                style={{
+                  animation: "pulse 2s ease-in-out 1, none 2s",
+                }}
+              ></div>
+            </div>
             <div className="text-left space-y-3">
               <div className="space-y-1">
                 <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-900 dark:text-white">

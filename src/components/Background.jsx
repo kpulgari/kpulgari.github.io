@@ -49,31 +49,15 @@ const InteractiveBackground = () => {
     transform: "translate3d(0, 0, 0)",
   };
 
-  const gridOpacityX =
-    typeof window !== "undefined"
-      ? 0.1 + (mousePos.x / window.innerWidth) * 0.3
-      : 0.1;
-  const gridOpacityY =
-    typeof window !== "undefined"
-      ? 0.1 + (mousePos.y / window.innerHeight) * 0.3
-      : 0.1;
-  const gridSizeX =
-    typeof window !== "undefined"
-      ? 60 + (mousePos.x / window.innerWidth) * 20
-      : 60;
-  const gridSizeY =
-    typeof window !== "undefined"
-      ? 60 + (mousePos.y / window.innerHeight) * 20
-      : 60;
+  const gridOpacity = 0.15;
+  const gridSize = 60;
 
   const gridStyle = {
     backgroundImage: `
-      linear-gradient(rgba(59, 130, 246, ${gridOpacityX}) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, ${gridOpacityY}) 1px, transparent 1px)
+      linear-gradient(rgba(59, 130, 246, ${gridOpacity}) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, ${gridOpacity}) 1px, transparent 1px)
     `,
-    backgroundSize: `${gridSizeX}px ${gridSizeY}px`,
-    transform: `translate3d(${mousePos.x * 0.01}px, ${mousePos.y * 0.01}px, 0)`,
-    willChange: "transform, background-size",
+    backgroundSize: `${gridSize}px ${gridSize}px`,
   };
 
   const centerX = typeof window !== "undefined" ? window.innerWidth / 2 : 400;
@@ -81,7 +65,7 @@ const InteractiveBackground = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%,
           100% {
