@@ -7,6 +7,7 @@ import ifi from "./assets/ifi-terminal.jpg";
 import wikipedia from "./assets/wikipedia-thumbnail.png";
 import magellan from "./assets/magellan.png";
 import illinois from "./assets/illinois.png";
+import apple from "./assets/apple.jpg";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
@@ -37,12 +38,23 @@ const buttons = [
 
 const work = [
   {
+    name: "Apple",
+    link: "https://www.apple.com",
+    role: "Software Engineer",
+    dates: "Oct. 2025 - Present",
+    location: "Cupertino, CA",
+    description: "Applied Machine Learning Team",
+    image: <img src={apple} className="w-8 h-8 rounded-lg object-cover"></img>,
+    tags: [],
+  },
+  {
     name: "Cohesity",
     link: "https://www.cohesity.com",
-    role: "Software Engineer (MTS I)",
-    dates: "Jun. 2025 - Present",
+    role: "Software Engineer",
+    dates: "Jun. 2025 - Oct. 2025",
     location: "Santa Clara, CA",
-    description: "Working on distributed file systems.",
+    description:
+      "Refactored unit tests and implemented performance optimizations to significantly reduce test execution time. Created a new customer-facing webpage to display real-time metrics for background scrubbing operations.",
     image: <img src={cohesity} className="w-8 h-8 rounded-lg"></img>,
     tags: ["C++", "RPC"],
   },
@@ -197,7 +209,7 @@ const Page = () => {
                   Kaushik Pulgari
                 </h1>
                 <p className="lg:text-sm md:text-sm text-xs text-gray-600 dark:text-gray-400">
-                  {"SWE @ Cohesity | CS + Econ @ UIUC"}
+                  {"SWE @ Apple | CS + Econ @ UIUC"}
                 </p>
               </div>
               <div className="flex flex-row items-center justify-left space-x-1 sm:space-x-2">
@@ -235,16 +247,8 @@ const Page = () => {
                   </p>
                   <p>
                     {
-                      "I'm currently working on the distributed file system team at "
+                      "I'm currently working on the Applied Machine Learning team at Apple."
                     }
-                    <a
-                      href="https://cohesity.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sky-blue-accent hover:underline underline-offset-2 font-medium"
-                    >
-                      Cohesity.
-                    </a>
                   </p>
                   <p>
                     {"I enjoy building stuff like "}
