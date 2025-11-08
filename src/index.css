@@ -7,7 +7,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all 0.3s ease-out;
 }
 
 .dark {
@@ -23,17 +22,15 @@
 
 .pin-button {
   background: linear-gradient(145deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06),
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(148, 163, 184, 0.2);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pin-button:hover {
   background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .dark .pin-button {
@@ -45,23 +42,20 @@
 
 .dark .pin-button:hover {
   background: linear-gradient(145deg, #2a2a2a 0%, #353535 50%, #252525 100%);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6), 0 4px 6px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .pin-card {
   background: linear-gradient(145deg, #ffffff 0%, #fefefe 50%, #f8fafc 100%);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06),
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(148, 163, 184, 0.15);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pin-card:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 8px 12px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .dark .pin-card {
@@ -72,9 +66,8 @@
 }
 
 .dark .pin-card:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8), 0 8px 12px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6), 0 4px 8px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .sky-blue-accent {

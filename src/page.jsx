@@ -103,7 +103,7 @@ const projects = [
             href="https://kpulgari.com/magellan/"
             target="_blank"
             rel="noopener noreferrer"
-            className="pin-button p-1.5 rounded-md transition-colors flex items-center justify-center"
+            className="pin-button p-1.5 rounded-md flex items-center justify-center"
           >
             <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
           </a>
@@ -111,7 +111,7 @@ const projects = [
             href="https://github.com/magellan-extension/magellan"
             target="_blank"
             rel="noopener noreferrer"
-            className="pin-button p-1.5 rounded-md transition-colors flex items-center justify-center"
+            className="pin-button p-1.5 rounded-md flex items-center justify-center"
           >
             <FaGithub className="w-4 h-4"></FaGithub>
           </a>
@@ -196,12 +196,7 @@ const Page = () => {
                 alt="Kaushik Pulgari"
               />
 
-              <div
-                className="absolute inset-2 rounded-full bg-gradient-to-r from-sky-400/75 to-blue-500/75 opacity-20"
-                style={{
-                  animation: "pulse 2s ease-in-out 1, none 2s",
-                }}
-              ></div>
+              <div className="absolute inset-2 rounded-full bg-gradient-to-r from-sky-400/75 to-blue-500/75 opacity-20"></div>
             </div>
             <div className="text-left space-y-3">
               <div className="space-y-1">

@@ -119,13 +119,11 @@ const InteractiveBackground = () => {
       {[...Array(9)].map((_, i) => (
         <div
           key={`node-${i}`}
-          className="absolute w-2 h-2 rounded-full dark:block hidden bg-blue-400 opacity-20 hover:opacity-80 hover:scale-150 transition-all duration-300"
+          className="absolute w-2 h-2 rounded-full dark:block hidden bg-blue-400 opacity-20"
           style={{
             left: `${20 + (i % 3) * 30}%`,
             top: `${20 + Math.floor(i / 3) * 30}%`,
             transform: `translate3d(-50%, -50%, 0)`,
-            animation: `glow ${3 + (i % 3)}s ease-in-out infinite`,
-            animationDelay: `${i * 0.3}s`,
           }}
         />
       ))}
