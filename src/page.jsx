@@ -42,8 +42,8 @@ const work = [
     link: "https://www.apple.com",
     role: "Software Engineer",
     dates: "Oct. 2025 - Present",
-    location: "Cupertino, CA",
-    description: "Applied Machine Learning Team",
+    location: " ",
+    description: "Applied ML Team",
     image: <img src={apple} className="w-8 h-8 rounded-lg object-cover"></img>,
     tags: [],
   },
@@ -159,7 +159,7 @@ const projects = [
     screenshot: ifi,
     description:
       "Real-time financial data platform that integrates yFinance and Finnhub API with customizable dashboards and modular components for market analysis and insights.",
-    tags: ["Python", "Conda"],
+    tags: ["Python", "Rich Library"],
   },
   {
     name: (
@@ -209,7 +209,7 @@ const Page = () => {
                   Kaushik Pulgari
                 </h1>
                 <p className="lg:text-sm md:text-sm text-xs text-gray-600 dark:text-gray-400">
-                  {"SWE @ Apple | CS + Econ @ UIUC"}
+                  {"Software Engineer @ Apple"}
                 </p>
               </div>
               <div className="flex flex-row items-center justify-left space-x-1 sm:space-x-2">

@@ -38,17 +38,6 @@ const InteractiveBackground = () => {
     setParticles(newParticles);
   }, []);
 
-  const spotlightStyle = {
-    left: mousePos.x - 200,
-    top: mousePos.y - 200,
-    width: "400px",
-    height: "400px",
-    background: `radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 30%, transparent 70%)`,
-    borderRadius: "50%",
-    filter: "blur(20px)",
-    transform: "translate3d(0, 0, 0)",
-  };
-
   const gridOpacity = 0.15;
   const gridSize = 60;
 
@@ -96,8 +85,6 @@ const InteractiveBackground = () => {
           }
         }
       `}</style>
-
-      <div className="absolute pointer-events-none" style={spotlightStyle} />
 
       <div className="absolute inset-0 opacity-20 dark:opacity-10">
         <div className="w-full h-full" style={gridStyle} />
