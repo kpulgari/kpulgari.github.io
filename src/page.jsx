@@ -11,7 +11,6 @@ import apple from "./assets/apple.jpg";
 import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
-import InteractiveBackground from "./components/Background";
 
 const buttons = [
   {
@@ -185,22 +184,19 @@ const projects = [
 const Page = () => {
   return (
     <div className="relative">
-      <InteractiveBackground></InteractiveBackground>
       <main className="flex flex-col items-center min-h-screen relative z-10 max-w-[1440px] mx-auto">
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
+        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
           <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center space-x-4 md:space-x-8 lg:space-x-10">
             <div className="relative">
               <img
                 src={kpulgari}
-                className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 ring-4 ring-sky-200/50 dark:ring-gray-400/30 relative z-10"
+                className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 border-2 border-gray-200 dark:border-gray-700 relative z-10"
                 alt="Kaushik Pulgari"
               />
-
-              <div className="absolute inset-2 rounded-full bg-gradient-to-r from-sky-400/75 to-blue-500/75 opacity-20"></div>
             </div>
             <div className="text-left space-y-3">
               <div className="space-y-1">
-                <h1 className="lg:text-4xl md:text-3xl text-2xl font-bold text-gray-900 dark:text-white">
+                <h1 className="lg:text-4xl md:text-3xl text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
                   Kaushik Pulgari
                 </h1>
                 <p className="lg:text-sm md:text-sm text-xs text-gray-600 dark:text-gray-400">
@@ -227,17 +223,17 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
-          <div className="flex flex-col gap-3">
-            <h2 className="font-bold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white">
+        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
+          <div className="flex flex-col gap-4">
+            <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white tracking-tight">
               About
             </h2>
-            <div className="pin-card rounded-lg p-4">
+            <div className="pin-card rounded-lg p-6">
               <div className="flex flex-row items-center justify-left text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <p>
                     {
-                      "Hey! 👋 I'm Kaushik, a CS + Economics graduate from the University of Illinois Urbana-Champaign. "
+                      "Hey! I'm Kaushik, a CS & Economics grad from the University of Illinois Urbana-Champaign. "
                     }
                   </p>
                   <p>
@@ -299,13 +295,13 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
-          <div className="flex flex-col gap-3">
-            <h2 className="font-bold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white">
+        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
+          <div className="flex flex-col gap-4">
+            <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white tracking-tight">
               Education
             </h2>
-            <div className="pin-card rounded-lg p-4">
-              <div className="flex flex-col space-y-3">
+            <div className="pin-card rounded-lg p-6">
+              <div className="flex flex-col space-y-4">
                 <div className="flex flex-col md:flex-row md:justify-between w-full md:items-start">
                   <div>
                     <div className="flex flex-row space-x-3 items-center">
@@ -315,7 +311,7 @@ const Page = () => {
                         alt="UIUC Logo"
                       />
                       <div>
-                        <div className="font-bold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
+                        <div className="font-semibold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
                           <div>University of Illinois Urbana-Champaign</div>
                           <a
                             href="https://illinois.edu"
@@ -364,21 +360,21 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
-          <div className="flex flex-col gap-3">
-            <h2 className="font-bold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white">
+        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
+          <div className="flex flex-col gap-4">
+            <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white tracking-tight">
               Experience
             </h2>
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-5">
               {work.map((w, index) => (
-                <div key={index} className="pin-card rounded-lg p-4">
-                  <div className="flex flex-col space-y-3">
+                <div key={index} className="pin-card rounded-lg p-6">
+                  <div className="flex flex-col space-y-4">
                     <div className="flex flex-col md:flex-row md:justify-between w-full md:items-start">
                       <div>
                         <div className="flex flex-row space-x-3 items-center">
                           {w["image"]}
                           <div>
-                            <div className="font-bold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
+                            <div className="font-semibold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
                               <div>{w["name"]}</div>
                               <a
                                 href={w["link"]}
@@ -424,33 +420,33 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12 mb-16">
-          <h2 className="font-bold lg:text-2xl md:text-2xl text-xl mb-4 text-gray-900 dark:text-white">
+        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16 mb-16">
+          <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl mb-6 text-gray-900 dark:text-white tracking-tight">
             Projects
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {projects.map((project, index) => (
               <div
                 key={index}
                 className="pin-card flex flex-col rounded-lg overflow-hidden"
               >
-                <div className="lg:h-56 md:h-80 h-64 flex items-center justify-center overflow-hidden">
+                <div className="lg:h-56 md:h-80 h-64 flex items-center justify-center overflow-hidden border-b border-gray-200 dark:border-gray-800">
                   <img
                     src={project.screenshot}
                     alt={`${project.name} screenshot`}
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="flex flex-col p-4 space-y-3">
+                <div className="flex flex-col p-6 space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-lg text-gray-900 dark:text-white tracking-tight">
                       {project["name"]}
                     </h3>
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     {project["description"]}
                   </p>
-                  <div className="flex flex-wrap gap-2 pt-1">
+                  <div className="flex flex-wrap gap-2 pt-2">
                     {project["tags"].map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
