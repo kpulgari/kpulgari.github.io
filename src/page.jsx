@@ -186,7 +186,7 @@ const Page = () => {
   return (
     <div className="relative">
       <InteractiveBackground></InteractiveBackground>
-      <main className="flex flex-col items-center min-h-screen relative z-10">
+      <main className="flex flex-col items-center min-h-screen relative z-10 max-w-[1440px] mx-auto">
         <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-12">
           <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center space-x-4 md:space-x-8 lg:space-x-10">
             <div className="relative">
@@ -242,11 +242,11 @@ const Page = () => {
                   </p>
                   <p>
                     {
-                      "I'm currently working on the Applied Machine Learning team at Apple."
+                      "I'm currently a software engineer working on the Applied Machine Learning team at Apple."
                     }
                   </p>
                   <p>
-                    {"I enjoy building stuff like "}
+                    {"In my free time, I enjoy building stuff like "}
                     <a
                       href="https://kpulgari.com/magellan/"
                       target="_blank"
