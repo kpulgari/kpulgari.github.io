@@ -311,16 +311,8 @@ const Page = () => {
                         alt="UIUC Logo"
                       />
                       <div>
-                        <div className="font-semibold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
-                          <div>University of Illinois Urbana-Champaign</div>
-                          <a
-                            href="https://illinois.edu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-gray-500 hover:text-sky-500 dark:text-gray-400 dark:hover:text-sky-400"
-                          >
-                            <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
-                          </a>
+                        <div className="font-semibold lg:text-sm md:text-sm text-xs text-gray-900 dark:text-white">
+                          University of Illinois Urbana-Champaign
                         </div>
                         <div className="text-xs text-gray-600 dark:text-gray-400">
                           B.S. Computer Science & Economics
@@ -374,16 +366,8 @@ const Page = () => {
                         <div className="flex flex-row space-x-3 items-center">
                           {w["image"]}
                           <div>
-                            <div className="font-semibold lg:text-sm md:text-sm text-xs flex-row flex items-center space-x-2 text-gray-900 dark:text-white">
-                              <div>{w["name"]}</div>
-                              <a
-                                href={w["link"]}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-500 hover:text-sky-500 dark:text-gray-400 dark:hover:text-sky-400"
-                              >
-                                <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
-                              </a>
+                            <div className="font-semibold lg:text-sm md:text-sm text-xs text-gray-900 dark:text-white">
+                              {w["name"]}
                             </div>
                             <div className="text-xs text-gray-600 dark:text-gray-400">
                               {w["role"]}
