@@ -38,7 +38,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      className="pin-button p-2 rounded-md text-gray-700 dark:text-gray-300"
+      className="icon-link"
     >
       {currentTheme === "dark" ? (
         <Sun className="w-4 h-4" />

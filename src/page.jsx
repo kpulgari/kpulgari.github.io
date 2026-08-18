@@ -9,171 +9,109 @@ import magellan from "./assets/magellan.png";
 import illinois from "./assets/illinois.png";
 import apple from "./assets/apple.jpg";
 import { Mail } from "lucide-react";
-import { FaGithub, FaLinkedinIn, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import ThemeToggle from "./ThemeToggle";
 
-const buttons = [
-  {
-    name: "Email",
-    icon: <Mail className="w-4 h-4" />,
-    link: "mailto:kaushik.pulgari@gmail.com",
-  },
-  {
-    name: "LinkedIn",
-    icon: <FaLinkedinIn className="w-4 h-4" />,
-    link: "https://www.linkedin.com/in/kpulgari",
-  },
-  {
-    name: "GitHub",
-    icon: <FaGithub className="w-4 h-4" />,
-    link: "https://github.com/kpulgari",
-  },
-  {
-    name: "Resume",
-    icon: <span className="text-xs font-semibold">Resume</span>,
-    link: "/resume.pdf",
-  },
+const sections = [
+  { id: "about", label: "About" },
+  { id: "education", label: "Education" },
+  { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
+];
+
+const links = [
+  { name: "Email", icon: <Mail className="w-3.5 h-3.5" />, href: "mailto:kaushik.pulgari@gmail.com" },
+  { name: "LinkedIn", icon: <FaLinkedinIn className="w-3.5 h-3.5" />, href: "https://www.linkedin.com/in/kpulgari" },
+  { name: "GitHub", icon: <FaGithub className="w-3.5 h-3.5" />, href: "https://github.com/kpulgari" },
+  { name: "Resume", icon: <span className="text-[9px] font-semibold tracking-wide">CV</span>, href: "/resume.pdf" },
 ];
 
 const work = [
   {
     name: "Apple",
-    link: "https://www.apple.com",
-    role: "Software Engineer",
-    dates: "Oct. 2025 - Present",
-    location: " ",
-    description: "Applied ML Team",
-    image: <img src={apple} className="w-8 h-8 rounded-lg object-cover"></img>,
-    tags: [],
+    href: "https://www.apple.com",
+    role: "Software Engineer (Applied ML)",
+    dates: "Oct 2025 - Present",
+    location: "Austin, TX",
+    description: "Building and scaling AI/ML systems and infrastructure for Apple's internal applications and products.",
+    logo: apple,
+    tags: ["Python", "Kubernetes", "vLLM", "Flux CD", "Prometheus", "Grafana"],
   },
   {
     name: "Cohesity",
-    link: "https://www.cohesity.com",
-    role: "Software Engineer",
-    dates: "Jun. 2025 - Oct. 2025",
+    href: "https://www.cohesity.com",
+    role: "Software Engineer (Distributed File Storage)",
+    dates: "Jun - Oct 2025",
     location: "Santa Clara, CA",
     description:
-      "Refactored unit tests and implemented performance optimizations to significantly reduce test execution time. Created a new customer-facing webpage to display real-time metrics for background scrubbing operations.",
-    image: <img src={cohesity} className="w-8 h-8 rounded-lg"></img>,
-    tags: ["C++", "RPC"],
+      "Improved test infrastructure and reduced execution time through unit test refactoring and performance optimizations. Built a customer-facing dashboard for real-time monitoring of background scrubbing operations.",
+    logo: cohesity,
+    tags: ["C++", "RPC", "Distributed Systems"],
   },
   {
     name: "Cohesity",
-    link: "https://www.cohesity.com",
+    href: "https://www.cohesity.com",
     role: "Software Engineering Intern",
-    dates: "May 2024 - Dec. 2024",
+    dates: "May - Dec 2024",
     location: "San Jose, CA",
     description:
-      "Built a Python microservice for cluster data ingestion and Grafana visualization to identify performance bottlenecks. Managed release pipelines, delivered technical demos to leadership and company-wide audiences, and authored comprehensive documentation for developer onboarding and version control.",
-    image: <img src={cohesity} className="w-8 h-8 rounded-lg"></img>,
+      "Built a Python microservice for cluster data ingestion and visualizations to identify performance bottlenecks. Managed release pipelines, delivered technical demos to leadership and company-wide audiences, and authored comprehensive documentation for developer onboarding and version control.",
+    logo: cohesity,
     tags: ["Python", "PostgreSQL", "Grafana", "AWS RDS"],
   },
   {
     name: "Charles Schwab",
-    link: "https://www.schwab.com",
+    href: "https://www.schwab.com",
     role: "Software Engineering Intern",
-    dates: "Jun. 2023 - Aug. 2023",
+    dates: "Jun - Aug 2023",
     location: "St. Louis, MO",
     description:
-      "Optimized ASP.NET and Angular.js applications handling 20K+ users/minute during the TDA-Schwab merger. Integrated logging framework and implemented comprehensive unit testing to improve code coverage and system reliability across full-stack applications.",
-    image: <img src={schwab} className="w-8 h-8 rounded-lg"></img>,
+      "Optimized critical applications serving 20K+ users per minute during the TD Ameritrade-Schwab merger. Integrated a logging framework and expanded unit testing to improve code coverage, reliability, and observability across full-stack applications.",
+    logo: schwab,
     tags: ["ASP.NET", "Angular.js", "C#", "JavaScript"],
   },
   {
     name: "Mortgage Connect",
-    link: "https://www2.mortgageconnectlp.com",
+    href: "https://www2.mortgageconnectlp.com",
     role: "Software QA Intern",
-    dates: "Jun. 2022 - Aug. 2022",
+    dates: "Jun - Aug 2022",
     location: "Remote",
     description:
-      "Built automated regression testing suite using TestNG and Selenium for API and UI validation. Implemented structured logging, annotations, and error handling to enhance test maintainability and debugging efficiency following automation best practices.",
-    image: <img src={mortgage_connect} className="w-8 h-8 rounded-lg"></img>,
+      "Built an automated regression testing suite for API and UI validation. Implemented structured logging, annotations, and error handling to enhance test maintainability and debugging efficiency following automation best practices.",
+    logo: mortgage_connect,
     tags: ["Java", "Selenium", "Postman", "TestNG"],
   },
 ];
 
 const projects = [
   {
-    name: (
-      <div className="flex flex-row items-center space-x-2">
-        <span>Magellan</span>
-        <div className="flex space-x-2">
-          <a
-            href="https://kpulgari.com/magellan/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pin-button p-1.5 rounded-md flex items-center justify-center"
-          >
-            <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
-          </a>
-          <a
-            href="https://github.com/magellan-extension/magellan"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pin-button p-1.5 rounded-md flex items-center justify-center"
-          >
-            <FaGithub className="w-4 h-4"></FaGithub>
-          </a>
-        </div>
-      </div>
-    ),
+    name: "Magellan",
+    liveUrl: "https://kpulgari.com/magellan/",
+    githubUrl: "https://github.com/magellan-extension/magellan",
     screenshot: magellan,
     description:
-      "Open-source Chrome sidebar extension that enables conversational AI for web browsing with contextual Q&A, intelligent citations, and seamless tab navigation.",
-    tags: ["JavaScript", "Google Chrome API", "Gemini API", "HTML", "CSS"],
+      "Open-source Chrome extension for conversational AI-powered web browsing, featuring contextual Q&A, intelligent citations, semantic search, and seamless tab navigation.",
+    tags: ["JavaScript", "OpenRouter", "Chrome API"],
   },
   {
-    name: (
-      <div className="flex flex-row items-center space-x-2">
-        <span>Modulo</span>
-        <a
-          href="https://projectmodulo.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pin-button p-1.5 rounded-md transition-colors flex items-center justify-center"
-        >
-          <FaExternalLinkAlt className="w-3 h-3"></FaExternalLinkAlt>
-        </a>
-      </div>
-    ),
+    name: "Modulo",
+    liveUrl: "https://projectmodulo.com/",
     screenshot: modulo,
     description:
-      "Global collaboration platform that features task management, roadmapping, and AI-powered communication tools for individual creators and distributed teams.",
+      "Collaboration platform that features task management, roadmapping, and AI-powered communication tools for individual creators and distributed teams.",
     tags: ["Next.js", "JavaScript", "Vertex API", "Firebase", "shadcn"],
   },
   {
-    name: (
-      <div className="flex flex-row items-center space-x-2">
-        <span>IFI Terminal</span>
-        <a
-          href="https://github.com/kpulgari/ifi-terminal"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pin-button p-1.5 rounded-md transition-colors flex items-center justify-center"
-        >
-          <FaGithub className="w-4 h-4"></FaGithub>
-        </a>
-      </div>
-    ),
+    name: "IFI Terminal",
+    githubUrl: "https://github.com/kpulgari/ifi-terminal",
     screenshot: ifi,
     description:
       "Real-time financial data platform that integrates yFinance and Finnhub API with customizable dashboards and modular components for market analysis and insights.",
     tags: ["Python", "Rich Library"],
   },
   {
-    name: (
-      <div className="flex flex-row items-center space-x-2">
-        <span>Linking Wikipedia Pages</span>
-        <a
-          href="https://github.com/kpulgari/linking-wikipedia-pages"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="pin-button p-1.5 rounded-md transition-colors flex items-center justify-center"
-        >
-          <FaGithub className="w-4 h-4"></FaGithub>
-        </a>
-      </div>
-    ),
+    name: "Linking Wikipedia Pages",
+    githubUrl: "https://github.com/kpulgari/linking-wikipedia-pages",
     screenshot: wikipedia,
     description:
       "Page connection tool that uses BFS, IDDFS, and PageRank on SNAP Wikipedia dataset to compute shortest path between pages and analyze network connectivity.",
@@ -183,270 +121,196 @@ const projects = [
 
 const Page = () => {
   return (
-    <div className="relative">
-      <main className="flex flex-col items-center min-h-screen relative z-10 max-w-[1440px] mx-auto">
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
-          <div className="w-full flex flex-row lg:justify-center md:justify-center justify-left items-center space-x-4 md:space-x-8 lg:space-x-10">
-            <div className="relative">
-              <img
-                src={kpulgari}
-                className="rounded-full lg:w-36 lg:h-36 md:w-36 md:h-36 w-28 h-28 border-2 border-gray-200 dark:border-gray-700 relative z-10"
-                alt="Kaushik Pulgari"
-              />
-            </div>
-            <div className="text-left space-y-3">
-              <div className="space-y-1">
-                <h1 className="lg:text-4xl md:text-3xl text-2xl font-semibold text-gray-900 dark:text-white tracking-tight">
-                  Kaushik Pulgari
-                </h1>
-                <p className="lg:text-sm md:text-sm text-xs text-gray-600 dark:text-gray-400">
-                  {"Software Engineer @ Apple"}
-                </p>
+    <div className="site-shell">
+      <aside className="sidebar">
+        <img
+          src={kpulgari}
+          alt="Kaushik Pulgari"
+          className="w-24 h-24 rounded-md object-cover mb-5"
+        />
+        <h1 className="text-[1.35rem] font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 leading-snug">
+          Kaushik Pulgari
+        </h1>
+        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+          Software Engineer @ Apple
+        </p>
+
+        <nav className="sidebar-nav">
+          {sections.map((section) => (
+            <a key={section.id} href={`#${section.id}`}>
+              {section.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-1.5 mt-6 lg:mt-8">
+          <ThemeToggle />
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+              title={link.name}
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
+      </aside>
+
+      <div className="content">
+        <section id="about" className="section-block">
+          <p className="section-label">About</p>
+          <div className="section-body">
+            <p>
+              Hey! I&apos;m Kaushik, a Computer Science & Economics grad from UIUC.
+            </p>
+            <p>
+              I&apos;m currently a software engineer on Apple&apos;s Applied Machine Learning team.
+            </p>
+            <p>
+              In my free time, I enjoy building stuff like{" "}
+              <a href="https://kpulgari.com/magellan/" target="_blank" rel="noopener noreferrer" className="text-link">
+                Magellan
+              </a>
+              {" - "}a Chrome extension for conversational AI within tabs - and{" "}
+              <a href="https://projectmodulo.com/" target="_blank" rel="noopener noreferrer" className="text-link">
+                Modulo
+              </a>
+              , a project management & collaboration tool.
+            </p>
+            <p>
+              Beyond code, I&apos;m a sports enthusiast, experimental cook, gym
+              aficionado, and virtual globe-trotter via Google Maps.
+            </p>
+            <p>
+              Feel free to connect on{" "}
+              <a href="http://linkedin.com/in/kpulgari/" target="_blank" rel="noopener noreferrer" className="text-link">
+                LinkedIn
+              </a>
+              {" or shoot me an "}
+              <a href="mailto:kaushik.pulgari@gmail.com" className="text-link">
+                email
+              </a>
+              .
+            </p>
+          </div>
+        </section>
+
+        <section id="education" className="section-block">
+          <p className="section-label">Education</p>
+          <div className="section-items">
+            <article className="entry-row">
+              <div className="entry-header">
+                <div className="flex items-start gap-3">
+                  <img src={illinois} alt="UIUC" className="w-8 h-8 rounded object-cover mt-0.5" />
+                  <div>
+                    <p className="font-medium text-zinc-900 dark:text-zinc-100 text-[0.9375rem]">
+                      University of Illinois Urbana-Champaign
+                    </p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                      B.S. Computer Science & Economics
+                    </p>
+                  </div>
+                </div>
+                <div className="entry-meta">
+                  <p>2021 - 2025</p>
+                  <p className="mt-0.5 text-xs">GPA 3.98</p>
+                </div>
               </div>
-              <div className="flex flex-row items-center justify-left space-x-1 sm:space-x-2">
-                <ThemeToggle></ThemeToggle>
-                {buttons.map((button, index) => (
-                  <a
-                    key={index}
-                    href={button.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="pin-button p-2 rounded-md text-sm text-gray-700 dark:text-gray-300"
-                  >
-                    <div className="w-fit h-4 text-center items-center justify-center flex">
-                      {button.icon}
-                    </div>
-                  </a>
+              <p className="entry-detail">
+                Data Structures & Algorithms, Database Systems, Machine Learning, Distributed
+                Systems, Cloud Computing
+              </p>
+              <div className="tags">
+                {["Magna Cum Laude", "Phi Beta Kappa", "ACM", "Asha for Education"].map((tag) => (
+                  <span key={tag} className="tag">{tag}</span>
                 ))}
               </div>
-            </div>
+            </article>
           </div>
         </section>
 
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
-          <div className="flex flex-col gap-4">
-            <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white tracking-tight">
-              About
-            </h2>
-            <div className="pin-card rounded-lg p-6">
-              <div className="flex flex-row items-center justify-left text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                <div className="space-y-4">
-                  <p>
-                    {
-                      "Hey! I'm Kaushik, a CS & Economics grad from the University of Illinois Urbana-Champaign. "
-                    }
-                  </p>
-                  <p>
-                    {
-                      "I'm currently a software engineer working on the Applied Machine Learning team at Apple."
-                    }
-                  </p>
-                  <p>
-                    {"In my free time, I enjoy building stuff like "}
-                    <a
-                      href="https://kpulgari.com/magellan/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sky-blue-accent hover:underline underline-offset-2 font-medium"
-                    >
-                      Magellan
-                    </a>
-                    {
-                      " - a Chrome extension for conversational AI within tabs - and "
-                    }
-                    <a
-                      href="https://projectmodulo.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sky-blue-accent hover:underline underline-offset-2 font-medium"
-                    >
-                      Modulo
-                    </a>
-                    {", a project management & collaboration tool."}
-                  </p>
-                  <p>
-                    {
-                      "Beyond code, I'm a sports enthusiast, experimental cook, gym aficionado, and virtual globe-trotter via Google Maps."
-                    }
-                  </p>
-                  <p>
-                    {"Feel free to connect with me on "}
-                    <a
-                      href="http://linkedin.com/in/kpulgari/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sky-blue-accent hover:underline underline-offset-2 font-medium"
-                    >
-                      LinkedIn
-                    </a>
-                    {" or shoot me an "}
-                    <a
-                      href="mailto:kaushik.pulgari@gmail.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sky-blue-accent hover:underline underline-offset-2 font-medium"
-                    >
-                      email!
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
-          <div className="flex flex-col gap-4">
-            <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white tracking-tight">
-              Education
-            </h2>
-            <div className="pin-card rounded-lg p-6">
-              <div className="flex flex-col space-y-4">
-                <div className="flex flex-col md:flex-row md:justify-between w-full md:items-start">
-                  <div>
-                    <div className="flex flex-row space-x-3 items-center">
-                      <img
-                        src={illinois}
-                        className="w-8 h-8 rounded-lg"
-                        alt="UIUC Logo"
-                      />
-                      <div>
-                        <div className="font-semibold lg:text-sm md:text-sm text-xs text-gray-900 dark:text-white">
-                          University of Illinois Urbana-Champaign
-                        </div>
-                        <div className="text-xs text-gray-600 dark:text-gray-400">
-                          B.S. Computer Science & Economics
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-left md:text-right mt-2 md:mt-0">
-                    <div className="text-xs lg:text-sm md:text-sm font-medium text-gray-900 dark:text-white">
-                      Aug. 2021 - May 2025
-                    </div>
-                    <div className="text-xs text-gray-600 dark:text-gray-400">
-                      GPA: 3.98/4.00
-                    </div>
-                  </div>
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Relevant Coursework: Data Structures & Algorithms, Database
-                  Systems, ML, Distributed Systems, Cloud Computing, NLP
-                </div>
-                <div className="flex-wrap flex flex-row gap-2">
-                  <div className="pin-tag px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
-                    Magna Cum Laude
-                  </div>
-                  <div className="pin-tag px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
-                    Phi Beta Kappa
-                  </div>
-                  <div className="pin-tag px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
-                    ACM
-                  </div>
-                  <div className="pin-tag px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300">
-                    Asha for Education
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16">
-          <div className="flex flex-col gap-4">
-            <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl text-gray-900 dark:text-white tracking-tight">
-              Experience
-            </h2>
-            <div className="flex flex-col space-y-5">
-              {work.map((w, index) => (
-                <div key={index} className="pin-card rounded-lg p-6">
-                  <div className="flex flex-col space-y-4">
-                    <div className="flex flex-col md:flex-row md:justify-between w-full md:items-start">
-                      <div>
-                        <div className="flex flex-row space-x-3 items-center">
-                          {w["image"]}
-                          <div>
-                            <div className="font-semibold lg:text-sm md:text-sm text-xs text-gray-900 dark:text-white">
-                              {w["name"]}
-                            </div>
-                            <div className="text-xs text-gray-600 dark:text-gray-400">
-                              {w["role"]}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="text-left md:text-right mt-2 md:mt-0">
-                        <div className="text-xs lg:text-sm md:text-sm font-medium text-gray-900 dark:text-white">
-                          {w["dates"]}
-                        </div>
-                        <div className="text-xs text-gray-600 dark:text-gray-400">
-                          {w["location"]}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                      {w["description"]}
-                    </div>
-                    <div className="flex-wrap flex flex-row gap-2">
-                      {w["tags"].map((tag, tagIndex) => (
-                        <div
-                          key={tagIndex}
-                          className="pin-tag px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300"
-                        >
-                          {tag}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="lg:w-1/2 md:w-3/4 w-[90%] mt-16 mb-16">
-          <h2 className="font-semibold lg:text-2xl md:text-2xl text-xl mb-6 text-gray-900 dark:text-white tracking-tight">
-            Projects
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="pin-card flex flex-col rounded-lg overflow-hidden"
-              >
-                <div className="lg:h-56 md:h-80 h-64 flex items-center justify-center overflow-hidden border-b border-gray-200 dark:border-gray-800">
-                  <img
-                    src={project.screenshot}
-                    alt={`${project.name} screenshot`}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col p-6 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-lg text-gray-900 dark:text-white tracking-tight">
-                      {project["name"]}
-                    </h3>
-                  </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {project["description"]}
-                  </p>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project["tags"].map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="pin-tag px-2.5 py-1 font-medium rounded-md text-xs text-gray-700 dark:text-gray-300"
+        <section id="experience" className="section-block">
+          <p className="section-label">Experience</p>
+          <div className="section-items">
+            {work.map((job) => (
+              <article key={`${job.name}-${job.dates}`} className="entry-row">
+                <div className="entry-header">
+                  <div className="flex items-center gap-2.5">
+                    <img src={job.logo} alt={job.name} className="w-7 h-7 rounded object-cover" />
+                    <div>
+                      <a
+                        href={job.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-[0.9375rem] text-zinc-900 dark:text-zinc-100 hover:underline underline-offset-2"
                       >
-                        {tag}
-                      </span>
+                        {job.name}
+                      </a>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400">{job.role}</p>
+                    </div>
+                  </div>
+                  <div className="entry-meta">
+                    <p>{job.dates}</p>
+                    <p className="mt-0.5 text-xs">{job.location}</p>
+                  </div>
+                </div>
+                <p className="entry-detail">{job.description}</p>
+                {job.tags.length > 0 && (
+                  <div className="tags">
+                    {job.tags.map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
                     ))}
                   </div>
-                </div>
-              </div>
+                )}
+              </article>
             ))}
           </div>
         </section>
-        <section className="h-12"></section>
-      </main>
+
+        <section id="projects" className="section-block">
+          <p className="section-label">Projects</p>
+          <div className="section-items">
+            {projects.map((project) => (
+              <article key={project.name} className="project-row">
+                <div className="project-thumb">
+                  <img src={project.screenshot} alt={project.name} />
+                </div>
+                <div className="entry-row">
+                  <div className="project-title-row">
+                    <h3 className="font-medium text-[0.9375rem] text-zinc-900 dark:text-zinc-100">
+                      {project.name}
+                    </h3>
+                    {(project.liveUrl || project.githubUrl) && (
+                      <span className="project-links">
+                        {project.liveUrl && (
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            site
+                          </a>
+                        )}
+                        {project.githubUrl && (
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            source
+                          </a>
+                        )}
+                      </span>
+                    )}
+                  </div>
+                  <p className="entry-detail">{project.description}</p>
+                  <div className="tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
